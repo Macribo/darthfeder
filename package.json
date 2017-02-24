@@ -1,0 +1,22 @@
+{
+  "name": "tileworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tileworld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Macribo/darthfeder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Macribo/darthfeder/issues"
+  },
+  "homepage": "https://github.com/Macribo/darthfeder#readme",
+  "devDependencies": {
+    "browserify": "^14.1.0"
+  }
+}
