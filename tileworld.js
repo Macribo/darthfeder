@@ -96,18 +96,28 @@ function createGrid(tw, th){
     }
 }
 
+let randomTileVariations = createArrayOfRandomInts(100,4);
+
 function updateGrid(tw, th, map, sx, sy){
     for(let tileY = 0; tileY < th; tileY++){ 
         for(let tileX = 0; tileX < tw; tileX++){
-            let mapSymbol = map[tileY + sy][tileX + sx];   //tileY gives us the map line, tileX gives the character position    
+            let mapX =tileY + sy;
+            let mapY =tileX + sx;
+
+            let variationIndex = mapX * mapY;
+            let terrainVariation = randomTileVariations[variationIndex % randomTileVariations.length];
+            let mapSymbol = map[mapX][mapY];   //tileY gives us the map line, tileX gives the character position    
             let terrainType = mapSymbolToTerrainType(mapSymbol);
 
             let tile = document.querySelector(`#tile${tileX}_${tileY}`);
 
             if (terrainType !== undefined) {
                 // show tile
-                let terrainVariation = 1;//Math.floor(Math.random()*3);
                 // let terrainVariation =0 ;
+                if(mapSymbol === '6'){
+                    terrainVariation = mapY;
+                    terrainVariation = (terrainVariation + Math.floor(Date.now() / 1000)) % 4;
+                }
                 let backgroundPosX = -terrainVariation * tileSize;
                 let backgroundPosY = -terrainType * tileSize;
                 tile.style.backgroundPositionX = `${backgroundPosX}px`;
@@ -1178,7 +1188,6 @@ function doTimers(t,i){
 
 
 
-//setInterval( ()=> {
     grid.style.left = -ox % tileSize;
     grid.style.top = -oy % tileSize;
     let sx = Math.ceil(ox / tileSize);
@@ -1221,5 +1230,10 @@ function setOffset(offsetx,offsety){
 
 }
 
-
-
+function createArrayOfRandomInts(length,upperbound){
+    let randomNumbers = Array(length);
+    for (let i = 0; i<randomNumbers.length; i++){
+        randomNumbers[i] = Math.floor(Math.random()*upperbound);
+    }
+    return randomNumbers;
+}
