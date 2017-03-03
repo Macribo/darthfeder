@@ -166,12 +166,13 @@ requestAnimationFrame(timerLoop);
 function doTimers(){
     grid.style.left =`${-ox % tileSize}px`;
     grid.style.top = `${-oy % tileSize}px`;
-    let sx = Math.ceil(ox / tileSize);
-    let sy = Math.ceil(oy / tileSize);
+    let sx = Math.floor(ox / tileSize);
+    let sy = Math.floor(oy / tileSize);
 
     updateGrid(tw, th, county, sx, sy);
 }
 
+let px, py;
 window.addEventListener("keydown", function(event){
    // console.log('keycode', event.keyCode);
     const step = 1;
