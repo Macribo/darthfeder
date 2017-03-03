@@ -1,49 +1,15 @@
-<!doctype><html>
-    <style>
-        * {
-            margin: 0 0;
-            padding: 0 0;
-        }
-        #viewport {
-            background-color: blue;
-            opacity: 0.1;
-            position: absolute;
-            left: 0px;
-            right: 0px;
-            z-index: 10;
-            width: 10px;
-            height: 10px;
-        }
-        .tile {
-            width:32px; 
-            height:32px;
-            background-image: url("images/tileset1.png");
-            position: absolute;
-        
-        }
-        #grid {
-            position: absolute;
-        }
-        
-        #player{
-            position: absolute;            
-            left: 0px;
-            top: 0px;
-            height: 49px;
-            width: 32px;
-            background-image: url("images/player.png");
-        }
-        
-        body{
-            background-color: black;
-        }
-</style>
-<body>
-    <div id="grid"></div>
-    <div id="player"></div>
-    <div id="viewport"></div>
-</body>
- 
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <link rel="stylesheet" type="text/css" href="tileworld.css">
+    </head>       
+      <body>
+            <div id="grid"></div>
+            <div id="player"></div>
+            <div id="viewport"></div>
+      </body>
     <script src="bundle.js"></script>
     <script src="player.js"></script>
 </html>

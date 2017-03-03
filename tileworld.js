@@ -2,11 +2,13 @@
 const maps = require('./maps');
 const tileSize = 32;
 // viewport dimensions
-const vw = 32 * 32 + 10;
+const vw = 32 * 32+ 10;
 const vh = 19 * 32 + 5;
 let viewport = document.querySelector('#viewport');
-viewport.style.width = vw;
-viewport.style.height = vh;
+console.log('I am RUNNING! vh vw:',vh,vw);
+viewport.style.width = vw +"px";
+viewport.style.height = vh+"px";
+console.log('viewport :',viewport);
 
 //
 //working with requestAnimationFrame
@@ -63,6 +65,7 @@ let th = Math.floor(vh / tileSize + 1);
 createGrid(tw, th);
 
 function createTile(tileX, tileY, terrainType, terrainVariation ){
+   // console.log(`CreateTiel ${tileX}, ${tileY}`); 
     let tile = document.createElement("div");
     tile.setAttribute("id", `tile${tileX}_${tileY}`); //template strings
     tile.classList.add('tile');  
@@ -70,8 +73,8 @@ function createTile(tileX, tileY, terrainType, terrainVariation ){
     let backgroundPosY = -terrainType * tileSize;
     tile.style.backgroundPositionX = `${backgroundPosX}px`;
     tile.style.backgroundPositionY = `${backgroundPosY}px`;
-    tile.style.left = tileX*tileSize;
-    tile.style.top = tileY*tileSize;
+    tile.style.left = tileX*tileSize+ "px";
+    tile.style.top = tileY*tileSize + "px";
     
     return tile;
 }
@@ -84,10 +87,10 @@ function mapSymbolToTerrainType(mapSymbol) {
         '4': 4,
         '5': 4,
         '6': 1
-    }[mapSymbol];
+    }[mapSymbol] || 0; //property lookup in object literal || 0
 }
 function createGrid(tw, th){
-    console.log(`Creating tile grid ${tw}x${th}`);
+    //console.log(`Creating tile grid ${tw}x${th}`);
     for(let tileY = 0; tileY < th; tileY++){ 
         for(let tileX = 0; tileX < tw; tileX++){
             let tile = createTile(tileX, tileY, 0,0);
@@ -153,50 +156,41 @@ function createWorldMap(map){
 
 
 let county = maps.cork.split("\n");
+//console.log('county', county);
 
 let ox=0, oy=0;
 let grid = document.querySelector('#grid');
 
 requestAnimationFrame(timerLoop);
 
-function doTimers(t,i){
-
-
-
-    grid.style.left = -ox % tileSize;
-    grid.style.top = -oy % tileSize;
+function doTimers(){
+    grid.style.left =`${-ox % tileSize}px`;
+    grid.style.top = `${-oy % tileSize}px`;
     let sx = Math.ceil(ox / tileSize);
     let sy = Math.ceil(oy / tileSize);
 
     updateGrid(tw, th, county, sx, sy);
-
-
-
-
 }
 
-    window.addEventListener("keydown", function(event){
-        console.log('keycode', event.keyCode);
-        const step = 1;
-        switch(event.keyCode){
-            case 38:  //up
-                  py-= step;  oy--;
-                     break;
-            case 40:  //down
-                  py+= step;   oy++;
-                     break;
-            case 39:  //right
-                  px+= step;    ox++;
-                     break;
-            case 37:  //left
-                  px-= step;    ox--;
-                     break;
-        
-        
-        
-        }
+window.addEventListener("keydown", function(event){
+   // console.log('keycode', event.keyCode);
+    const step = 1;
+    switch(event.keyCode){
+        case 38:  //up
+              py-= step;  oy--;
+                 break;
+        case 40:  //down
+              py+= step;   oy++;
+                 break;
+        case 39:  //right
+              px+= step;    ox++;
+                 break;
+        case 37:  //left
+              px-= step;    ox--;
+                 break;
+    }
     event.preventDefault();
-    });
+});
 
 
 function setOffset(offsetx,offsety){

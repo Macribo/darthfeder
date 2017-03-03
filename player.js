@@ -42,7 +42,7 @@ window.addEventListener("keydown", function(event){
     
     
     }
-    setPlayerPos(px, py);
+//    setPlayerPos(px, py);
     event.preventDefault();
     console.log("px: ", px, "   py: ", py);
 });
