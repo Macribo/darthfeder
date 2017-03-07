@@ -1,0 +1,169 @@
+
+when the player reaches the edge of a county that is touching another county, 
+the player should be asked if s/he would like to leave this county and enter the next county.
+if no, the game continues.
+if yes the new map should load with the player at the correct border
+   
+
+the bordering counties are as follows
+
+Contae Ḋún na nGall
+    u
+    d
+    l
+    r
+Contae Ḋoire
+    u
+    d
+    l
+    r
+Contae An Dúin
+    u
+    d
+    l
+    r
+Contae Ṫír Eoghain
+    u
+    d
+    l
+    r
+Contae Ard Ṁaċa
+    u
+    d
+    l
+    r
+Contae Ṁuineaċáin
+    u
+    d
+    l
+    r
+Contae Lú
+    u
+    d
+    l
+    r
+Contae Ḃaile Átha Ċliath
+    u
+    d
+    l
+    r
+Contae Na Mí
+    u
+    d
+    l
+    r
+Contae Ċill Ṁantáin
+    u
+    d
+    l
+    r
+Contae Loch Garman
+    u
+    d
+    l
+    r
+Contae Ṗort Láirge
+    u
+    d
+    l
+    r
+Contae Ċorcaí
+    u
+    d
+    l
+    r
+Contae Ċiarraí
+    u
+    d
+    l
+    r
+Contae An Ċláir
+    u
+    d
+    l
+    r
+Contae na Gailliṁe
+    u
+    d
+    l
+    r
+Contae Ṁaigh Eo
+    u
+    d
+    l
+    r
+Contae Ṡligiġ
+    u
+    d
+    l
+    r
+Contae Ros Comáin
+    u
+    d
+    l
+    r
+Contae Ċeaṫarlaċ
+    u
+    d
+    l
+    r
+Contae An LongFoirt
+    u
+    d
+    l
+    r
+Contae Na hIarṁí
+    u
+    d
+    l
+    r
+Contae Uíḃ Ḟailí
+    u
+    d
+    l
+    r
+Contae Laoise
+    u
+    d
+    l
+    r
+Contae Ċill Ċainniġ
+    u
+    d
+    l
+    r
+Contae Ṫiobraid Árann
+    u
+    d
+    l
+    r
+Contae Luimnigh
+    u
+    d
+    l
+    r
+Contae An Caḃáin
+    u
+    d
+    l
+    r
+Contae Ḟear Manaċ
+    u
+    d
+    l
+    r
+Contae Ċill Dara
+    u
+    d
+    l
+    r
+Contae Aontroma
+    u
+    d
+    l
+    r
+Contae Liatroma
+    u
+    d
+    l
+    r
