@@ -1,0 +1,15 @@
+TileWorld
+    getTileSize -> 32
+    getWidth    -> Nbr of horizontal tiles
+    getHeight
+    also encapsulates mapSymbolToTerreinType
+
+Camera manages the viewport and renders the map
+    setFocus(x, y) makes sure that given position is closest to the centre as possible
+    setViewportSize / -position
+    setTileWorld
+
+rud as thing in game world:  location or eventful object.
+ruds can be placed independent of the map grid.
+
+player counts as a special kind of rud, which is default  rudOfInterest ie thing the camera is tracking.

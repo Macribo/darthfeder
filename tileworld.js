@@ -1,16 +1,47 @@
 //jshint esversion:6
+
+const camera = require("./camera");
 const maps = require('./maps');
+
+let county = maps.cork.split("\n");
+
+function mapSymbolToTerrainType(mapSymbol) {
+    return {
+        '1': 0,
+        '2': 2,
+        '3': 2,
+        '4': 4,
+        '5': 4,
+        '6': 1
+    }[mapSymbol] || 0; //property lookup in object literal || 0
+}
 const tileSize = 32;
-// viewport dimensions
 const vw = 32 * 32+ 10;
 const vh = 19 * 32 + 5;
-let viewport = document.querySelector('#viewport');
-console.log('I am RUNNING! vh vw:',vh,vw);
-viewport.style.width = vw +"px";
-viewport.style.height = vh+"px";
-console.log('viewport :',viewport);
+let grid = document.querySelector('#grid');
+camera(tileSize, county, grid, vw, vh, mapSymbolToTerrainType);
 
-//
+
+/*
+function createWorldMap(map){
+    let mapHeight = map.length;
+    let mapWidth = map[0].length; // we assume a rectangular map
+    console.log(mapWidth, mapHeight);
+    for(let tileY = 0; tileY < mapHeight; tileY++){ 
+        for(let tileX = 0; tileX < mapWidth; tileX++){
+            let mapSymbol = map[tileY][tileX];   //tileY gives us the map line, tileX gives the character position    
+            let terrainType = mapSymbolToTerrainType(mapSymbol);
+            if (terrainType !== undefined) {
+                let terrainVariation = Math.floor(Math.random()*3);
+                let tile = createTile(tileX,tileY,terrainType,terrainVariation);
+                document.querySelector('body').appendChild(tile);
+            }
+        }
+    }
+}
+*/
+
+
 //working with requestAnimationFrame
 var timers = [];
 
@@ -37,57 +68,44 @@ function timerLoop(currentTime){
 
     //iterate through each timer object
     for(let i = 0; i<timers.length; i++){
-    
-            //if the currentTime is > this timer's nextFireTime
-        
+
+        //if the currentTime is > this timer's nextFireTime
+
         if (currentTime > timers[i].nextFireTime){
             var t= timers[i];
 
             //increment nextFireTime
             t.nextFireTime=currentTime+t.delay;
-        
+
             //execute the task specified in this timer
             t.doFunction(t,i);
         }
     }
 
-
 }
 
+requestAnimationFrame(timerLoop);
 
+function doTimers(){
+    grid.style.left =`${-ox % tileSize}px`;
+    grid.style.top = `${-oy % tileSize}px`;
+    let sx = Math.floor(ox / tileSize);
+    let sy = Math.floor(oy / tileSize);
 
-
-
-// minimum number of tiles to cover the
-// viewport under all circumstances
-let tw = Math.floor(vw / tileSize + 1);
-let th = Math.floor(vh / tileSize + 1);
-createGrid(tw, th);
-
-function createTile(tileX, tileY, terrainType, terrainVariation ){
-   // console.log(`CreateTiel ${tileX}, ${tileY}`); 
-    let tile = document.createElement("div");
-    tile.setAttribute("id", `tile${tileX}_${tileY}`); //template strings
-    tile.classList.add('tile');  
-    let backgroundPosX = -terrainVariation * tileSize;
-    let backgroundPosY = -terrainType * tileSize;
-    tile.style.backgroundPositionX = `${backgroundPosX}px`;
-    tile.style.backgroundPositionY = `${backgroundPosY}px`;
-    tile.style.left = tileX*tileSize+ "px";
-    tile.style.top = tileY*tileSize + "px";
-    
-    return tile;
+    updateGrid(tw, th, county, sx, sy);
 }
 
-function mapSymbolToTerrainType(mapSymbol) {
-    return {
-        '1': 0,
-        '2': 2,
-        '3': 2,
-        '4': 4,
-        '5': 4,
-        '6': 1
-    }[mapSymbol] || 0; //property lookup in object literal || 0
+function setOffset(offsetx,offsety){
+    body.style.backgroundPositionX = -offsetx + "px";
+    body.style.backgroundPositionY = -offsety + "px";
+}   
+
+function createArrayOfRandomInts(length,upperbound){
+    let randomNumbers = Array(length);
+    for (let i = 0; i<randomNumbers.length; i++){
+        randomNumbers[i] = Math.floor(Math.random()*upperbound);
+    }
+    return randomNumbers;
 }
 function createGrid(tw, th){
     //console.log(`Creating tile grid ${tw}x${th}`);
@@ -100,7 +118,39 @@ function createGrid(tw, th){
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+// minimum number of tiles to cover the
+// viewport under all circumstances
+let tw = Math.floor(vw / tileSize + 1);
+let th = Math.floor(vh / tileSize + 1);
+createGrid(tw, th);
+
+function createTile(tileX, tileY, terrainType, terrainVariation ){
+    // console.log(`CreateTiel ${tileX}, ${tileY}`); 
+    let tile = document.createElement("div");
+    tile.setAttribute("id", `tile${tileX}_${tileY}`); //template strings
+    tile.classList.add('tile');  
+    let backgroundPosX = -terrainVariation * tileSize;
+    let backgroundPosY = -terrainType * tileSize;
+    tile.style.backgroundPositionX = `${backgroundPosX}px`;
+    tile.style.backgroundPositionY = `${backgroundPosY}px`;
+    tile.style.left = tileX*tileSize+ "px";
+    tile.style.top = tileY*tileSize + "px";
+
+    return tile;
+}
+
 let randomTileVariations = createArrayOfRandomInts(100,4);
+
 
 function updateGrid(tw, th, map, sx, sy){
     for(let tileY = 0; tileY < th; tileY++){ 
@@ -135,75 +185,26 @@ function updateGrid(tw, th, map, sx, sy){
         }
     }
 }
-/*
-function createWorldMap(map){
-    let mapHeight = map.length;
-    let mapWidth = map[0].length; // we assume a rectangular map
-    console.log(mapWidth, mapHeight);
-    for(let tileY = 0; tileY < mapHeight; tileY++){ 
-        for(let tileX = 0; tileX < mapWidth; tileX++){
-            let mapSymbol = map[tileY][tileX];   //tileY gives us the map line, tileX gives the character position    
-            let terrainType = mapSymbolToTerrainType(mapSymbol);
-            if (terrainType !== undefined) {
-                let terrainVariation = Math.floor(Math.random()*3);
-                let tile = createTile(tileX,tileY,terrainType,terrainVariation);
-                document.querySelector('body').appendChild(tile);
-            }
-        }
-    }
-}
-*/
 
-
-let county = maps.cork.split("\n");
-//console.log('county', county);
 
 let ox=0, oy=0;
-let grid = document.querySelector('#grid');
-
-requestAnimationFrame(timerLoop);
-
-function doTimers(){
-    grid.style.left =`${-ox % tileSize}px`;
-    grid.style.top = `${-oy % tileSize}px`;
-    let sx = Math.floor(ox / tileSize);
-    let sy = Math.floor(oy / tileSize);
-
-    updateGrid(tw, th, county, sx, sy);
-}
-
 let px, py;
 window.addEventListener("keydown", function(event){
-   // console.log('keycode', event.keyCode);
+    // console.log('keycode', event.keyCode);
     const step = 1;
     switch(event.keyCode){
         case 38:  //up
-              py-= step;  oy--;
-                 break;
+            py-= step;  oy--;
+            break;
         case 40:  //down
-              py+= step;   oy++;
-                 break;
+            py+= step;   oy++;
+            break;
         case 39:  //right
-              px+= step;    ox++;
-                 break;
+            px+= step;    ox++;
+            break;
         case 37:  //left
-              px-= step;    ox--;
-                 break;
+            px-= step;    ox--;
+            break;
     }
     event.preventDefault();
 });
-
-
-function setOffset(offsetx,offsety){
-    body.style.backgroundPositionX = -offsetx + "px";
-    body.style.backgroundPositionY = -offsety + "px";
-
-}
-
-function createArrayOfRandomInts(length,upperbound){
-    let randomNumbers = Array(length);
-    for (let i = 0; i<randomNumbers.length; i++){
-        randomNumbers[i] = Math.floor(Math.random()*upperbound);
-    }
-    return randomNumbers;
-}
