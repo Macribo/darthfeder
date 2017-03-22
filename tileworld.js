@@ -7,13 +7,16 @@ let county = maps.cork.split("\n");
 
 function mapSymbolToTerrainType(mapSymbol) {
     return {
-        '1': 0,
-        '2': 2,
-        '3': 2,
-        '4': 4,
-        '5': 4,
-        '6': 1
-    }[mapSymbol] || 0; //property lookup in object literal || 0
+        '~': 1,//water
+        '.': 0, //Grassland
+        '*': 5,//paths
+        '|': 2,//forests
+        '^': 3,//hills
+        'M': 3,//mountains
+        '>': 1,//freshwater
+        '8': 1, //Atlantic water
+        't': 6//border
+    }[mapSymbol];// || 0; property lookup in object literal || 0
 }
 const tileSize = 32;
 const vw = 32 * 32+ 10;
@@ -168,9 +171,9 @@ function updateGrid(tw, th, map, sx, sy){
             if (terrainType !== undefined) {
                 // show tile
                 // let terrainVariation =0 ;
-                if(mapSymbol === '6'){
+                if(mapSymbol === '>'){
                     terrainVariation = mapY;
-                    terrainVariation = (terrainVariation + Math.floor(Date.now() / 1000)) % 4;
+                    terrainVariation = (terrainVariation + Math.floor(Date.now() / 500)) % 4;
                 }
                 let backgroundPosX = -terrainVariation * tileSize;
                 let backgroundPosY = -terrainType * tileSize;
