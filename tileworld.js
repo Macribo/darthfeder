@@ -3,7 +3,7 @@
 const Camera = require("./camera");
 const maps = require('./maps');
 
-let county = maps.donegal.split("\n");
+let county = maps.cavan.split("\n");
 
 function mapSymbolToTerrainType(mapSymbol) {
     return {
