@@ -74,12 +74,28 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
                 let tile = document.querySelector(`#tile${tileX}_${tileY}`);
 
                 if (terrainType !== undefined) {
-                    // show tile
+                    // animate water
                     // let terrainVariation =0 ;
                     if(mapSymbol === '>'){
                         terrainVariation = mapY;
                         terrainVariation = (terrainVariation + Math.floor(Date.now() / 500)) % 4;
                     }
+
+                    //animate surf
+                    if(mapSymbol === 'z'){
+                        terrainVariation = mapY;
+                        terrainVariation = (terrainVariation + Math.floor(Date.now()/1000)) %4;
+                    
+                    }
+ 
+
+                    //animate sea
+                    if(mapSymbol === '7'|| mapSymbol === '9'|| mapSymbol === '0'){
+                        terrainVariation = mapY;
+                        terrainVariation = (terrainVariation + Math.floor(Date.now()/3000)) %4;
+                    
+                    }
+ 
                     let backgroundPosX = -terrainVariation * tileSize;
                     let backgroundPosY = -terrainType * tileSize;
                     tile.style.backgroundPositionX = `${backgroundPosX}px`;

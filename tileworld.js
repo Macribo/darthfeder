@@ -3,7 +3,7 @@
 const Camera = require("./camera");
 const maps = require('./maps');
 
-let county = maps.cork.split("\n");
+let county = maps.clare.split("\n");
 
 function mapSymbolToTerrainType(mapSymbol) {
     return {
@@ -14,8 +14,16 @@ function mapSymbolToTerrainType(mapSymbol) {
         '^': 3,//hills
         'M': 3,//mountains
         '>': 1,//freshwater
-        '8': 1, //Atlantic water
-        't': 6//border
+        '8': 8, //Atlantic water
+        '9':9,//Atlantic waves
+        '0':10,//Atlantic waves
+        '7':11,//Atlantic waves
+        't': 6,//border
+        'z': 7 //surf
+        
+
+
+
     }[mapSymbol];// || 0; property lookup in object literal || 0
 }
 const tileSize = 32;
