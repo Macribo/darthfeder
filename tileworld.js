@@ -3,7 +3,7 @@
 const Camera = require("./camera");
 const maps = require('./maps');
 
-let county = maps.clare.split("\n");
+let county = maps.kerry.split("\n");
 
 function mapSymbolToTerrainType(mapSymbol) {
     return {
