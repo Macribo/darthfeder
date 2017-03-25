@@ -3,7 +3,7 @@
 const Camera = require("./camera");
 const maps = require('./maps');
 
-let county = maps.kerry.split("\n");
+let county = maps.donegal.split("\n");
 
 function mapSymbolToTerrainType(mapSymbol) {
     return {
@@ -19,8 +19,8 @@ function mapSymbolToTerrainType(mapSymbol) {
         '0':10,//Atlantic waves
         '7':11,//Atlantic waves
         't': 6,//border
-        'z': 7 //surf
-        
+        'z': 7, //surf
+        'x': 12//unreachable (grassland) 
 
 
 
