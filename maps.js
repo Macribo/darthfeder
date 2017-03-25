@@ -132,21 +132,21 @@ module.exports.donegal = `888888888888088888888888888888878888z........txxxxxxxx
 88888888888880888888z....8z...888988z...........tttxxxxxx
 88808888988888888888z..........88888z...^^^^^^....ttttttx
 889888888888z....888z...^^.....8888....^^MMMM^^^.......tt
-887888z.............*********..888....^^MMMMMMM^^^......t
-88888z..........^^***^^MMMM^**.88.....^MMMMMMMMMM^......t
-8888z......^^.^^***^^^MMMMM^.*.8......^MMMMMMMMM^^......t
-8888z....^^^^^***^^MMMMMMMM^.*.......^^MMMMMMM^^^......tt
-8888z....^^^.**^^MMMMMMMMM^^.******..^MMMMMM^^^.......ttx
-z..~.......***^MMMMMMMMMM^^.......*..^^^^^^^^.......tttxx
-z..~....^***^MMMMMMMMMMM^^........****..........tttttxxxx
-z.~~~..^**^MMMMMMMMMMMM^^....>>>>>>>>*.......ttttxxxxxxxx
-0888z...*^MMMMMMMMMMMM^^...>>>...^^.>*......ttxxxxxxxxxxx
-8898z..**^MMMMMMMMM^^^^..>>>.^^^^^^.>>>>>>>ttxxxxxxxxxxxx
-88888z.*^^MMMMM^^^^^.>>>>>^^^^.^^^.***....ttxxxxxxxxxxxxx
+887888z.............*********..888....MMMMMMMMM^^^......t
+88888z..........^^***MMMMMMM**.88.....^MMMMMMMMMM^......t
+8888z......^^.^^***MMMMMMMMM.*.8......MMMMMMMMMM^^......t
+8888z....^^^^^***MMMMMMMMMMM.*.......MMMMMMMMM^^^......tt
+8888z....^^^.**MMMMMMMMMMMMM.******..^MMMMMM^^^.......ttx
+z..8.......***MMMMMMMMMMMMM.......*..^^^^^^^^.......tttxx
+z..8....^***MMMM^^^^^^MMMM........****..........tttttxxxx
+z.888..^**MMMMMM^MMMM^MMM....>>>>>>>>*.......ttttxxxxxxxx
+0888z...*MMMMMMM^MM^^^MM...>>>...^^.>*......ttxxxxxxxxxxx
+8898z..**MMMMMM^^MMMMMM..>>>.^^^^^^.>>>>>>>ttxxxxxxxxxxxx
+88888z.*MMMMMMM^MMMM.>>>>>^^^^.^^^.***....ttxxxxxxxxxxxxx
 8788z..*^^^M^^^^.>>>>>..^^^MMM^^..**......txxxxxxxxxxxxxx
 .......*..^^^....^^^^^^^MMMM^^^****.....tttxxxxxxxxxxxxxx
 ..^^^^^*...^^^^^^^..^^..^^^^^.**...ttttttxxxxxxxxxxxxxxxx
-...^^^^*^^^^.********^^^^..****..tttxxxxxxxxxxxxxxxxxxxxx
+...^^^^*MM^M.********^^^^..****..tttxxxxxxxxxxxxxxxxxxxxx
 88z....*******..888.***...**.....txxxxxxxxxxxxxxxxxxxxxxx
 88888z....888888888z..*****......ttxxxxxxxxxxxxxxxxxxxxxx
 888888888888888888z...............txxxxxxxxxxxxxxxxxxxxxx
@@ -154,7 +154,7 @@ z.~~~..^**^MMMMMMMMMMMM^^....>>>>>>>>*.......ttttxxxxxxxx
 88888888888888z..................ttxxxxxxxxxxxxxxxxxxxxxx
 8888888889888z................ttttxxxxxxxxxxxxxxxxxxxxxxx
 8888888888888z............tttttxxxxxxxxxxxxxxxxxxxxxxxxxx
-8888888888888ttttttttttttttxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`;
+8888888888888ztttttttttttttxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`;
 
 
 //down
