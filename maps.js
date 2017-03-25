@@ -128,21 +128,21 @@ module.exports.derry = `~~~~~~~~~~~~~~~~~~~~~~~~~........~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~.......~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`;
 //Donegal
-module.exports.donegal = `888888888888888888888888888888888888z........txxxxxxxxxxx
-88888888888880888888z....~~...8888888...........tttxxxxxx
-88808888988888888888z..........888888...^^^^^^....ttttttx
-889888888888z....~~~~...^^.....8888....^^MMMM^^^.......tt
+module.exports.donegal = `888888888888088888888888888888878888z........txxxxxxxxxxx
+88888888888880888888z....8z...888988z...........tttxxxxxx
+88808888988888888888z..........88888z...^^^^^^....ttttttx
+889888888888z....888z...^^.....8888....^^MMMM^^^.......tt
 887888z.............*********..888....^^MMMMMMM^^^......t
 88888z..........^^***^^MMMM^**.88.....^MMMMMMMMMM^......t
 8888z......^^.^^***^^^MMMMM^.*.8......^MMMMMMMMM^^......t
 8888z....^^^^^***^^MMMMMMMM^.*.......^^MMMMMMM^^^......tt
-8888z....^^^.**^^MMMMMMMMM^^..*****..^MMMMMM^^^.......ttx
+8888z....^^^.**^^MMMMMMMMM^^.******..^MMMMMM^^^.......ttx
 z..~.......***^MMMMMMMMMM^^.......*..^^^^^^^^.......tttxx
-z..~....^***^MMMMMMMMMMM^^.........**...........tttttxxxx
-z.~~~..^**^MMMMMMMMMMMM^^....>>>>>>>>........ttttxxxxxxxx
-0888z...*^MMMMMMMMMMMM^^...>>>...^^.>>......ttxxxxxxxxxxx
-8898z..**^MMMMMMMMM^^^^..>>>.^^^^^^.*>>>>>>ttxxxxxxxxxxxx
-88888z.*^^MMMMM^^^^^.>>>>>^^^^.^^^.**.....ttxxxxxxxxxxxxx
+z..~....^***^MMMMMMMMMMM^^........****..........tttttxxxx
+z.~~~..^**^MMMMMMMMMMMM^^....>>>>>>>>*.......ttttxxxxxxxx
+0888z...*^MMMMMMMMMMMM^^...>>>...^^.>*......ttxxxxxxxxxxx
+8898z..**^MMMMMMMMM^^^^..>>>.^^^^^^.>>>>>>>ttxxxxxxxxxxxx
+88888z.*^^MMMMM^^^^^.>>>>>^^^^.^^^.***....ttxxxxxxxxxxxxx
 8788z..*^^^M^^^^.>>>>>..^^^MMM^^..**......txxxxxxxxxxxxxx
 .......*..^^^....^^^^^^^MMMM^^^****.....tttxxxxxxxxxxxxxx
 ..^^^^^*...^^^^^^^..^^..^^^^^.**...ttttttxxxxxxxxxxxxxxxx

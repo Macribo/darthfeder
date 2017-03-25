@@ -12,8 +12,8 @@ function mapSymbolToTerrainType(mapSymbol) {
         '*': 5,//paths
         '|': 2,//forests
         '^': 3,//hills
-        'M': 3,//mountains
-        '>': 1,//freshwater
+        'M': 4,//mountains
+        '>': 1,//riverwater
         '8': 8, //Atlantic water
         '9':9,//Atlantic waves
         '0':10,//Atlantic waves
