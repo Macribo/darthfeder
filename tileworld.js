@@ -5,7 +5,6 @@ const Camera = require("./camera");
 const maps = require('./maps');
 
 let county = maps.kerry.split("\n");
-
 function mapSymbolToTerrainType(mapSymbol) {
     return {
         '~': 1,//water
@@ -79,8 +78,33 @@ function createWorldMap(map){
 }
 */
 
+var inventory = document.querySelectorAll("#inventory>*");
+inventory = Array.prototype.slice.call(inventory);
+console.log(inventory);
+function dropItem() {
+    itemElement = inventory.shift(); //inventory 0 and remove inventory 0;
+    dropItemElement(itemElement);
+
+}
+
+function dropItemElement(itemElement){
+    const position = player.getPosition();
+    
+    camera.addSprite({
+        updateScreenPosition: function(x, y) {
+            itemElement.style.left = x + "px";
+            itemElement.style.top = y + "px";
+        },
+        getWorldPosition: function() {
+            return position;
+        }
+    });
+
+}
+
 window.addEventListener("keydown", function(event){
-    // console.log('keycode', event.keyCode);
+   //  console.log('keycode', event.keyCode);
+    
     const step = 4;
     switch(event.keyCode){
         case 38:  //up
@@ -94,6 +118,10 @@ window.addEventListener("keydown", function(event){
             break;
         case 37:  //left
             player.move(-step,0);
+            break;
+
+        case 68: //d key
+            dropItem();
             break;
     }
     event.preventDefault();

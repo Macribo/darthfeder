@@ -29,4 +29,8 @@
     width: 32px;
     background-image: url("images/player.png");
 }
-
+#inventory{
+}
+#inventory>*{
+    position: absolute;
+}
