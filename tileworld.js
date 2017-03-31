@@ -1,5 +1,6 @@
 //jshint esversion:6
 
+const Player = require("./player");
 const Camera = require("./camera");
 const maps = require('./maps');
 
@@ -30,23 +31,30 @@ const tileSize = 32;
 const vw = 32 * 32+ 10;
 const vh = 19 * 32 + 5;
 let grid = document.querySelector('#grid');
+
 let camera = Camera(tileSize, county, grid, vw, vh, mapSymbolToTerrainType);
-let player = document.querySelector('#player');
-let px = 0; 
-let py = 0;
+
+let playerElement = document.querySelector('#player');
+let player = Player();
+
+camera.addSprite({
+    updateScreenPosition: function(x, y) {
+        playerElement.style.left = x + "px";
+        playerElement.style.top = y + "px";
+    },
+    getWorldPosition: function() {
+        return player.getPosition();
+    }
+});
+
 
 let ox=0;
 let oy=0;
 
-function setPlayerPosition(){
-    player.style.left = (px-ox)+"px";
-    player.style.top = (py- oy)+"px";
-}
-
 function timerLoop() {
-    ox = px - (vw/2);
-    oy= py - (vh/2);
-    setPlayerPosition();
+    let playerPosition = player.getPosition();
+    ox = playerPosition.x - (vw/2);
+    oy = playerPosition.y - (vh/2);
     camera.setOffsets(ox, oy);
     requestAnimationFrame(timerLoop);
 }
@@ -76,21 +84,18 @@ window.addEventListener("keydown", function(event){
     const step = 4;
     switch(event.keyCode){
         case 38:  //up
-            py-= step;
+            player.move(0, -step);
             break;
         case 40:  //down
-            py+= step;
+            player.move(0, step);
             break;
         case 39:  //right
-            px+= step;
+            player.move(step,0);
             break;
         case 37:  //left
-            px-= step;
+            player.move(-step,0);
             break;
     }
     event.preventDefault();
-    console.log("x: ",px,"y: ",py);
-    setPlayerPosition();
-
 });
 

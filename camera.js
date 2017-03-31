@@ -24,6 +24,7 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
         let sy = Math.floor(oy / tileSize);
 
         updateGrid(tw, th, county, sx, sy);
+        updateSprites(ox, oy);
     }
 
     function createGrid(tw, th){
@@ -110,7 +111,24 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
         }
     }
 
-    return {
-        setOffsets: setOffsets
+    function updateSpritePosition(sprite, ox, oy){
+        let worldPosition = sprite.getWorldPosition();
+        let {x, y} = worldPosition;
+        sprite.updateScreenPosition((x-ox), (y- oy));
+    }
+
+    let sprites = [];
+    function addSprite(sprite) {
+        sprites.push(sprite);
+    }
+    function updateSprites(ox, oy) {
+        sprites.forEach( (sprite)=> {
+            updateSpritePosition(sprite, ox, oy);
+        });
+    }
+
+    return { //es6 shortcut for setOffsets: setOffsets, etc
+        setOffsets,
+        addSprite
     };
 };
