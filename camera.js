@@ -63,7 +63,7 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
                 let terrainVariation = randomTileVariations[variationIndex % randomTileVariations.length];
                 
                 let mapSymbol;
-                if (mapY>=map.length){
+                if (mapY>=map.length || mapY < 0){
                     mapSymbol=undefined;
                 } else {
                     mapSymbol = map[mapY][mapX];   //tileY gives us the map line, tileX gives the character position    

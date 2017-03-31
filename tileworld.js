@@ -3,7 +3,7 @@
 const Camera = require("./camera");
 const maps = require('./maps');
 
-let county = maps.cavan.split("\n");
+let county = maps.kerry.split("\n");
 
 function mapSymbolToTerrainType(mapSymbol) {
     return {
@@ -31,10 +31,22 @@ const vw = 32 * 32+ 10;
 const vh = 19 * 32 + 5;
 let grid = document.querySelector('#grid');
 let camera = Camera(tileSize, county, grid, vw, vh, mapSymbolToTerrainType);
+let player = document.querySelector('#player');
+let px = 0; 
+let py = 0;
 
-let ox=0, oy=0;
+let ox=0;
+let oy=0;
+
+function setPlayerPosition(){
+    player.style.left = (px-ox)+"px";
+    player.style.top = (py- oy)+"px";
+}
 
 function timerLoop() {
+    ox = px - (vw/2);
+    oy= py - (vh/2);
+    setPlayerPosition();
     camera.setOffsets(ox, oy);
     requestAnimationFrame(timerLoop);
 }
@@ -59,23 +71,26 @@ function createWorldMap(map){
 }
 */
 
-let px, py;
 window.addEventListener("keydown", function(event){
     // console.log('keycode', event.keyCode);
-    const step = 1;
+    const step = 4;
     switch(event.keyCode){
         case 38:  //up
-            py-= step;  oy--;
+            py-= step;
             break;
         case 40:  //down
-            py+= step;   oy++;
+            py+= step;
             break;
         case 39:  //right
-            px+= step;    ox++;
+            px+= step;
             break;
         case 37:  //left
-            px-= step;    ox--;
+            px-= step;
             break;
     }
     event.preventDefault();
+    console.log("x: ",px,"y: ",py);
+    setPlayerPosition();
+
 });
+
