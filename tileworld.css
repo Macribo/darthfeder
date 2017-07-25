@@ -2,6 +2,9 @@
     margin: 0 0;
     padding: 0 0;
 }
+#mapdata {
+    display: none;
+}
 #viewport {
     background-color: blue;
     opacity: 0.1;
@@ -28,6 +31,7 @@
     height: 49px;
     width: 32px;
     background-image: url("images/player.png");
+    z-index: 50;
 }
 #inventory{
 }

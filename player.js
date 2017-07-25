@@ -8,6 +8,8 @@ module.exports = function Player(){
     function move(stepX, stepY){
         px += stepX;
         py += stepY;
+        
+    console.log("x: ",px,"y: ",py);
     }
 
     function getPosition() {

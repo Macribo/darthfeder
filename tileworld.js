@@ -2,9 +2,9 @@
 
 const Player = require("./player");
 const Camera = require("./camera");
-const maps = require('./maps');
 
-let county = maps.kerry.split("\n");
+let county =document.querySelector("#mapdata").innerHTML.split('\n');
+console.log(county);
 function mapSymbolToTerrainType(mapSymbol) {
     return {
         '~': 1,//water
@@ -27,8 +27,8 @@ function mapSymbolToTerrainType(mapSymbol) {
     }[mapSymbol];// || 0; property lookup in object literal || 0
 }
 const tileSize = 32;
-const vw = 32 * 32+ 10;
-const vh = 19 * 32 + 5;
+const vw = 22 * 32+ 10;
+const vh = 15 * 32 + 5;
 let grid = document.querySelector('#grid');
 
 let camera = Camera(tileSize, county, grid, vw, vh, mapSymbolToTerrainType);
@@ -46,7 +46,7 @@ camera.addSprite({
     }
 });
 
-
+//grid offset x and y
 let ox=0;
 let oy=0;
 
@@ -84,12 +84,12 @@ console.log(inventory);
 function dropItem() {
     itemElement = inventory.shift(); //inventory 0 and remove inventory 0;
     dropItemElement(itemElement);
-
 }
 
 function dropItemElement(itemElement){
     const position = player.getPosition();
     
+    console.log(`data-x="${position.x}" data-y="${position.y}"`);
     camera.addSprite({
         updateScreenPosition: function(x, y) {
             itemElement.style.left = x + "px";
@@ -124,6 +124,11 @@ window.addEventListener("keydown", function(event){
             dropItem();
             break;
     }
+
     event.preventDefault();
 });
 
+//new function for placing locations:
+//go through inventory items.
+//if inv item has data-x and data-y attributes, (look up getAttribute on MDN)
+//add sprite at that location.
