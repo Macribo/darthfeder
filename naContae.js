@@ -28,6 +28,7 @@ let maps = require("./maps");
 //Create the map
 
 let story = 0;
+
 var map = [];
 
 
@@ -120,7 +121,7 @@ var item = "";
 
 
 
-
+var imreoirWLv= document.querySelector('#imreoirWLv');//player With Grahic showing his/her lv
 var imreoir = document.querySelector('#imreoir');
 var pAinm=document.querySelector('#pAinm');
 
@@ -157,6 +158,8 @@ ainmBtn.addEventListener("click", ainmHandler);
 render();
 
 
+imreoirLvL.addEventListener("click", levelLeftHandler);
+imreoirLvR.addEventListener("click", levelRightHandler);
 
 countyBtnLeft.addEventListener("click",bckBadgeHandler, false);
 countyBtnRight.addEventListener("click",fwdBadgeHandler, false);
@@ -182,12 +185,24 @@ function bckBadgeHandler(){
 }
 
 
+function levelLeftHandler(){
+updateImreoirLv(1);
 
+}
+function levelRightHandler(){
+updateImreoirLv(-1);
+}
     function playHandler(){
           }
     var coPos = 1; //county Position
    
-function updateCountyMain(dist){
+function updateImreoirLv(lv){
+        lv += lv*175; // {width:175} 
+        coPos += lv;
+
+
+    imreoirWLv.style.backgroundPositionX = coPos+"px";
+    }function updateCountyMain(dist){
         dist += dist*538; //#countyMain {width:539} 
         coPos += dist;
            // if (coPos> 18865){coPos =0;}
@@ -235,21 +250,38 @@ console.log("hello levelSelect");
 
 
     function ainmHandler(){
-        console.log("hello ainmHanlder");
        story++; 
         playGame();//activates the forest of Lycria &narrate() 
     if (story===1){ //Tús means Start. We start here.
            //show name entry options play music. save name
            
            audioAbattoir.play();
-           htmla.style.backgroundImage ="url('../../images/bgDark.png')"; 
+           htmla.style.backgroundImage ="url('../../images/bgDark.png')";            
+         inputName.style.display='none';
+         inputLabel.style.display='none';
+       ainmBtn.style.display='none';
+       imreoir.style.display='none';
+        
+       imreoirWLv.style.opacity='1';
+        
+       imreoirLvR.style.display='inline';
+       //imreoirLvR.style.animation='fade-in 1s forwards';
+       
+       imreoirLvL.style.display='inline';
+      // imreoirLvL.style.animation='fade-in 1s forwards';
+       
+
+      // story++;
        }
 
         if(story===2){ //select language leve
-          narrate(2);
-         inputName.style.display='none';
-         inputLabel.style.display='none';
-       }
+       imreoirLvR.style.display='inline';
+       imreoirLvR.style.animation='fade-in 1s forwards';
+       
+       imreoirLvL.style.display='inline';
+       imreoirLvL.style.animation='fade-in 1s forwards';
+       
+        }
 
 
 
@@ -258,7 +290,6 @@ console.log("hello levelSelect");
          countyMain.style.top='50px';
          narrate(3);
          badgeSelectorR(100);
-         ainmBtn.style.display='none';
          countyBtnRight.style.animation='fade-in 1s forwards';
          rightPanel.style.display='inline';    
          countyBtnRight.style.animation='fade-in 1s forwards';

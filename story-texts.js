@@ -13,16 +13,16 @@ module.exports = [
 
 `,
   
-
+//1
     
-//2
+
 
 `
-<span id='For whom'>Cé dó </span><span id='shall you play'>an imreoidh tú</span> :
+<span id='What'>Cén </span><span id='Level of Irish'>Gaelige atá agat?</span> :
   `, 
     
-//18
-  `
+//2
+  `Roghnaigh foireann:
   `, 
     
 //19
