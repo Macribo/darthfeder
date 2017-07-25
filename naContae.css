@@ -165,7 +165,7 @@ button
 }
 
 
-#imreoirLvL {
+#btnLvL { 
   position:relative;
  display:none;
  top:-211px;
@@ -176,7 +176,7 @@ button
  background-color: green;
  z-index:75;
 }
-#imreoirLvR {
+#btnLvR {
     position:relative;
   display:none;
   top:-211px;

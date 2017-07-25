@@ -1,7 +1,6 @@
 
 //jshint esversion:6
 window.onload=function(){
-
 /*
 
 
@@ -30,6 +29,9 @@ let maps = require("./maps");
 let story = 0;
 
 var map = [];
+
+let imreoirBlurbs=['','Níl Gaeilge agam','Tá beagán Gaeilge agam','Tá Gaeilge agam','Cainteoir Líofa mé'];
+let blurbId =0;
 
 
 
@@ -158,8 +160,8 @@ ainmBtn.addEventListener("click", ainmHandler);
 render();
 
 
-imreoirLvL.addEventListener("click", levelLeftHandler);
-imreoirLvR.addEventListener("click", levelRightHandler);
+btnLvL.addEventListener("click", btnLvLHandler);
+btnLvR.addEventListener("click", btnLvRHandler);
 
 countyBtnLeft.addEventListener("click",bckBadgeHandler, false);
 countyBtnRight.addEventListener("click",fwdBadgeHandler, false);
@@ -185,30 +187,46 @@ function bckBadgeHandler(){
 }
 
 
-function levelLeftHandler(){
+function btnLvLHandler(){
 updateImreoirLv(1);
+   blurbId--;
+ if(blurbId<0 ){
+        blurbId = 4;}
+output2.innerHTML=imreoirBlurbs[blurbId];
+   }
+function btnLvRHandler(){
+updateImreoirLv(-1);
+blurbId++;
+if (blurbId>4){blurbId= 0;}
+console.log("blurrrb"+blurbId);
+output2.innerHTML=imreoirBlurbs[blurbId];
 
 }
-function levelRightHandler(){
-updateImreoirLv(-1);
-}
+
     function playHandler(){
           }
     var coPos = 1; //county Position
    
 function updateImreoirLv(lv){
-        lv += lv*175; // {width:175} 
+     /*  if (lv === 1){
+           blurbId--;
+       }
+       if(lv === -1){
+         blurbId++;
+       }
+      if(blurbId ===-1 ){
+        blurbId = 4;}
+    */
+    lv += lv*175; // {width:175} 
         coPos += lv;
 
-
     imreoirWLv.style.backgroundPositionX = coPos+"px";
-    }function updateCountyMain(dist){
+    }
+    
+function updateCountyMain(dist){
         dist += dist*538; //#countyMain {width:539} 
         coPos += dist;
-           // if (coPos> 18865){coPos =0;}
-           // if (coPos<0){coPos =18865;}
-
-    console.log("coMain bgposX = ", coPos);
+   console.log("coMain bgposX = ", coPos);
 
     countyMain.style.backgroundPositionX = coPos+"px";
     }
@@ -242,10 +260,6 @@ function updateImreoirLv(lv){
 console.log("hello levelSelect");
 
 }
-    function noPlayHandler(){
-            alert("Slán and thank you for visiting.");
-
-    }
 
 
 
@@ -264,22 +278,22 @@ console.log("hello levelSelect");
         
        imreoirWLv.style.opacity='1';
         
-       imreoirLvR.style.display='inline';
-       //imreoirLvR.style.animation='fade-in 1s forwards';
+       btnLvR.style.display='inline';
+       //btnLvR.style.animation='fade-in 1s forwards';
        
-       imreoirLvL.style.display='inline';
-      // imreoirLvL.style.animation='fade-in 1s forwards';
+       btnLvL.style.display='inline';
+      // btnLvL.style.animation='fade-in 1s forwards';
        
 
       // story++;
        }
 
-        if(story===2){ //select language leve
-       imreoirLvR.style.display='inline';
-       imreoirLvR.style.animation='fade-in 1s forwards';
+        if(story===2){ //select language level
+       btnLvR.style.display='inline';
+       btnLvR.style.animation='fade-in 1s forwards';
        
-       imreoirLvL.style.display='inline';
-       imreoirLvL.style.animation='fade-in 1s forwards';
+       btnLvL.style.display='inline';
+       btnLvL.style.animation='fade-in 1s forwards';
        
         }
 
