@@ -188,6 +188,19 @@ button
   z-index:75;
 }
 
+#levelSelect{
+display:none;
+position:relative;
+background-color: #207720;
+color:#ffe959;
+font-size:46;
+text-align:center;
+top:226px;
+left:197px;
+
+
+
+}
 #countyBtnLeft {
   position:relative;
   display:none;

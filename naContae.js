@@ -30,7 +30,7 @@ let story = 0;
 
 var map = [];
 
-let imreoirBlurbs=['','Níl Gaeilge agam','Tá beagán Gaeilge agam','Tá Gaeilge agam','Cainteoir Líofa mé'];
+let imreoirBlurbs=['Roghnaigh leibheal Gaeilge oirrúnach dhuit','Níl Gaeilge agam','Tá beagán Gaeilge agam','Tá Gaeilge agam','Cainteoir Líofa mé'];
 let blurbId =0;
 
 
@@ -122,7 +122,7 @@ var item = "";
 
 
 
-
+var selectLevel = document.querySelector('#selectLevel');
 var imreoirWLv= document.querySelector('#imreoirWLv');//player With Grahic showing his/her lv
 var imreoir = document.querySelector('#imreoir');
 var pAinm=document.querySelector('#pAinm');
@@ -139,7 +139,7 @@ var output = document.querySelector("#output");
 var output2 = document.querySelector("#output2");
 var inputLabel = document.querySelector("#inputLabel");
 
-
+var levelSelect = document.querySelector('#levelSelect');
 var playBtn = document.querySelector('#play');
 var countyBtnRight = document.querySelector('#countyBtnRight');
 var countyBtnLeft = document.querySelector('#countyBtnLeft');
@@ -152,7 +152,7 @@ var curSiosArCo = document.querySelector('#curSiosArCo');
 //Event Listeners:
 joinTeam.addEventListener("click",joinTeamHandler);
 ainmBtn.addEventListener("click", ainmHandler);
-
+levelSelect.addEventListener("click", levelSelectHandler);
 
 
 
@@ -174,16 +174,11 @@ function fwdBadgeHandler(){
     
 }
 
-//deleted keypressHandler - may cause bugs later?
 function bckBadgeHandler(){
   // countyMain.style.animation="fade-out .25s";
     updateCountyMain(1);
   //  countyMain.style.opacity=1';
     updateCoNameL();
-    //    console.log("clicked <-");
-   // if (countyMain.style.opacity ===1){
- // countyMain.style.animation='dim .25s forwards';
-  // console.log("to be dimmed.") }
 }
 
 
@@ -193,14 +188,27 @@ updateImreoirLv(1);
  if(blurbId<0 ){
         blurbId = 4;}
 output2.innerHTML=imreoirBlurbs[blurbId];
-   }
+  
+  if(blurbId===0)
+    
+{
+       levelSelect.style.display='none';
+}else{
+levelSelect.style.display='block';
+}
+}
 function btnLvRHandler(){
 updateImreoirLv(-1);
 blurbId++;
 if (blurbId>4){blurbId= 0;}
 console.log("blurrrb"+blurbId);
 output2.innerHTML=imreoirBlurbs[blurbId];
-
+if(blurbId===0)
+{
+       levelSelect.style.display='none';
+}else{
+levelSelect.style.display='block';
+}
 }
 
     function playHandler(){
@@ -208,15 +216,6 @@ output2.innerHTML=imreoirBlurbs[blurbId];
     var coPos = 1; //county Position
    
 function updateImreoirLv(lv){
-     /*  if (lv === 1){
-           blurbId--;
-       }
-       if(lv === -1){
-         blurbId++;
-       }
-      if(blurbId ===-1 ){
-        blurbId = 4;}
-    */
     lv += lv*175; // {width:175} 
         coPos += lv;
 
@@ -250,57 +249,17 @@ function updateCountyMain(dist){
         curSiosArCo.style.display='none';
         //gameMap.style.display='inline';
         gameMap.style.animation='delay-fade-in 2s';
-//console.log("Heloo fresh new code",county);
-       //console.log("joinTeamHandler hello", mapdata.innerHTML); 
-   //alert("Hup! Deireadh le chuid a h-aon.");
     
-        levelSelect();
     }
-    function levelSelect(){
-console.log("hello levelSelect");
+    function levelSelectHandler(){
+        story=3;
 
-}
-
-
-
-    function ainmHandler(){
-       story++; 
-        playGame();//activates the forest of Lycria &narrate() 
-    if (story===1){ //Tús means Start. We start here.
-           //show name entry options play music. save name
-           
-           audioAbattoir.play();
-           htmla.style.backgroundImage ="url('../../images/bgDark.png')";            
-         inputName.style.display='none';
-         inputLabel.style.display='none';
-       ainmBtn.style.display='none';
-       imreoir.style.display='none';
-        
-       imreoirWLv.style.opacity='1';
-        
-       btnLvR.style.display='inline';
-       //btnLvR.style.animation='fade-in 1s forwards';
-       
-       btnLvL.style.display='inline';
-      // btnLvL.style.animation='fade-in 1s forwards';
-       
-
-      // story++;
-       }
-
-        if(story===2){ //select language level
-       btnLvR.style.display='inline';
-       btnLvR.style.animation='fade-in 1s forwards';
-       
-       btnLvL.style.display='inline';
-       btnLvL.style.animation='fade-in 1s forwards';
-       
-        }
-
-
-
-
-      if (story===3){ badgeSelectorL(100); //player selects team
+         btnLvR.style.display='none';
+         btnLvL.style.display='none';
+         levelSelect.style.display='none';
+         
+       inputElements.style.visibility='visible';    
+         badgeSelectorL(100); //player selects team
          countyMain.style.top='50px';
          narrate(3);
          badgeSelectorR(100);
@@ -314,7 +273,50 @@ console.log("hello levelSelect");
         //imreoir.style.display='block';
           joinTeam.style.display='inline';
         joinTeam.style.animation='delay-fade-in 5s';
-    }
+}
+
+
+
+    function ainmHandler(){
+       story++; 
+        playGame();//activates the forest of Lycria &narrate() 
+    if (story===1){ //Tús means Start. We start here.
+           //show name entry options play music. save name
+       inputElements.style.visibility='hidden';    
+       audioAbattoir.play();
+       htmla.style.backgroundImage ="url('../../images/bgDark.png')";            
+       inputName.style.display='none';
+       inputLabel.style.display='none';
+       ainmBtn.style.display='none';
+       imreoir.style.display='none';
+        
+       imreoirWLv.style.opacity='1';
+        
+       imreoirWLv.style.visibility='visible';
+       btnLvR.style.display='inline';
+       btnLvR.style.visibility='visible';
+       //btnLvR.style.animation='fade-in 1s forwards';
+       
+       btnLvL.style.visibility='visible';
+       btnLvL.style.display='inline';
+      // btnLvL.style.animation='fade-in 1s forwards';
+       
+
+      // story++;
+       }
+
+        if(story===2){ //select language level
+       btnLvR.style.display='inline';
+       btnLvR.style.animation='fade-in 1s forwards';
+       
+       btnLvL.style.display='inline';
+       btnLvL.style.animation='fade-in 1s forwards';
+            console.log("should have set level select display");
+        }
+
+
+
+
  }
 
 
