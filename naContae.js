@@ -23,7 +23,6 @@ let badgeSelectorL = require("../badge-selector-l");
 let badgeSelectorR = require("../badge-selector-r");
 let storyTexts = require("./story-texts"); //can't use capital letters with browswerify 
 let countyNames = require("../county-names");
-let maps = require("./maps");
 //Create the map
 
 let story = 0;
@@ -232,8 +231,6 @@ output2.style.visibility='hidden';}
     countyMain.style.backgroundPositionX = coPos+"px";
     }
     function joinTeamHandler(){
-       // mapdata.innerHTML= maps[countyId];
-       // console.log(mapdata.innerHTML);
         inputElements.style.display='none';
         countyMain.style.animation='fade-out 2s forwards';
         console.log("team joined",contae[countyId]);
@@ -242,7 +239,7 @@ output2.style.visibility='hidden';}
         joinTeam.style.display='none';
         imreoir.style.display='none';
         output.style.display='none';
-        window.location.replace("file:///home/ribo/dev/cq3/manifesto/src/naContae/naContae"+countyId+".html");
+        window.location.replace("file:///home/ribo/dev/cq3/manifesto/src/naContae/contaePages/naContae"+countyId+".html");
        
         //  output2.style.display='none';
       //output new position and text:
