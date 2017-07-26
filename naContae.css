@@ -286,7 +286,7 @@ left:197px;
 }
 */
 #inputName{
-position:relative;
+position:absolute;
 left:1px;
 top:-56px;
 width: 300px;
@@ -315,7 +315,7 @@ background:rgba(5,5,5,0.3);
     text-align:left;
     font-family:INFO56_0;
     font-size:40px;
-    top:-27px;
+    top:-167px;
     left:-5px;
 
 }

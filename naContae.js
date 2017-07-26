@@ -30,7 +30,7 @@ let story = 0;
 
 var map = [];
 
-let imreoirBlurbs=['Roghnaigh leibheal Gaeilge oirrúnach dhuit','Níl Gaeilge agam','Tá beagán Gaeilge agam','Tá Gaeilge agam','Cainteoir Líofa mé'];
+let imreoirBlurbs=['Roghnaigh leibheal Gaeilge','Níl Gaeilge agam','Tá beagán Gaeilge agam','Tá Gaeilge agam','Cainteoir Líofa mé'];
 let blurbId =0;
 
 
@@ -253,13 +253,16 @@ function updateCountyMain(dist){
     }
     function levelSelectHandler(){
         story=3;
-
+        //hide  level-select buttons
          btnLvR.style.display='none';
          btnLvL.style.display='none';
          levelSelect.style.display='none';
-         
+         //reveal hidden inputElements
        inputElements.style.visibility='visible';    
-         badgeSelectorL(100); //player selects team
+        
+       inputLabel.style.display='inline';
+        //this thing
+        badgeSelectorL(100); //player selects team
          countyMain.style.top='50px';
          narrate(3);
          badgeSelectorR(100);
@@ -270,7 +273,6 @@ function updateCountyMain(dist){
          countyBtnLeft.style.animation='fade-in 1s forwards';
          countyBtnLeft.style.display='inline';
         console.log("Hello", ainm);
-        //imreoir.style.display='block';
           joinTeam.style.display='inline';
         joinTeam.style.animation='delay-fade-in 5s';
 }
@@ -281,25 +283,27 @@ function updateCountyMain(dist){
        story++; 
         playGame();//activates the forest of Lycria &narrate() 
     if (story===1){ //Tús means Start. We start here.
-           //show name entry options play music. save name
-       inputElements.style.visibility='hidden';    
+           //play music.
+    
        audioAbattoir.play();
+        //Hide irrelevent buttons
+       inputElements.style.visibility='hidden';    
        htmla.style.backgroundImage ="url('../../images/bgDark.png')";            
        inputName.style.display='none';
        inputLabel.style.display='none';
        ainmBtn.style.display='none';
        imreoir.style.display='none';
-        
+       //show imreoir language level-icon 
        imreoirWLv.style.opacity='1';
-        
        imreoirWLv.style.visibility='visible';
+       
+        //show languagelevel right left buttons
        btnLvR.style.display='inline';
        btnLvR.style.visibility='visible';
-       //btnLvR.style.animation='fade-in 1s forwards';
        
        btnLvL.style.visibility='visible';
        btnLvL.style.display='inline';
-      // btnLvL.style.animation='fade-in 1s forwards';
+
        
 
       // story++;
