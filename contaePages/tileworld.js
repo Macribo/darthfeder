@@ -30,7 +30,7 @@ const tileSize = 32;
 const vw = 22 * 32+ 10;
 const vh = 15 * 32 + 5;
 let grid = document.querySelector('#grid');
-
+grid.style.left='200px';
 let camera = Camera(tileSize, county, grid, vw, vh, mapSymbolToTerrainType);
 
 let playerElement = document.querySelector('#player');
