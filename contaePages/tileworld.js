@@ -1,5 +1,7 @@
 //jshint esversion:6
 
+    alert("Maith thú! Visit www.ribodev.com for more info. Slán!");
+
 const Player = require("./player");
 const Camera = require("./camera");
 
