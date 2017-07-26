@@ -18,15 +18,25 @@ module.exports = [
 
 
 `
-<span id='What'>Cén </span><span id='Level of Irish'>Gaelige atá agat?</span> :
+<span id='What'>Cén </span><span id='Level of Irish'>Gaelige atá agat?</span> 
   `, 
     
 //2
-  `Roghnaigh foireann:
+  `Roghnaigh foireann1:
   `, 
     
 //19
-`
+  `Roghnaigh foireann2:
+  `, 
+   `Roghnaigh foireann.
+  `, 
+   `Roghnaigh foireann4:
+  `, 
+   `Roghnaigh foireann5:
+  `, 
+   `Roghnaigh foireann6:
+  `, 
+ `
 `
 
 

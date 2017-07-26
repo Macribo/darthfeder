@@ -132,7 +132,6 @@ var joinTeam = document.querySelector("#joinTeam");
 var image = document.querySelector("img");
 
 //let playerName = 'Imreoir_1';
-let rightPanel = document.querySelector("#right-panel");
 let contae = document.querySelector("#contae");
 
 var output = document.querySelector("#output");
@@ -175,9 +174,7 @@ function fwdBadgeHandler(){
 }
 
 function bckBadgeHandler(){
-  // countyMain.style.animation="fade-out .25s";
     updateCountyMain(1);
-  //  countyMain.style.opacity=1';
     updateCoNameL();
 }
 
@@ -214,10 +211,10 @@ levelSelect.style.display='block';
     function playHandler(){
           }
     var coPos = 1; //county Position
-   
+  var imPos=1; 
 function updateImreoirLv(lv){
     lv += lv*175; // {width:175} 
-        coPos += lv;
+        imPos += lv;
 
     imreoirWLv.style.backgroundPositionX = coPos+"px";
     }
@@ -247,8 +244,6 @@ function updateCountyMain(dist){
         contae.style.display='none';
         inputName.style.display='none';
         curSiosArCo.style.display='none';
-        //gameMap.style.display='inline';
-        gameMap.style.animation='delay-fade-in 2s';
     
     }
     function levelSelectHandler(){
@@ -260,14 +255,15 @@ function updateCountyMain(dist){
          //reveal hidden inputElements
        inputElements.style.visibility='visible';    
         
-       inputLabel.style.display='inline';
+       //inputLabel.style.display='block';
+       //inputLabel.innerHTML='Roghnaigh Foireann:';
+        
         //this thing
         badgeSelectorL(100); //player selects team
          countyMain.style.top='50px';
          narrate(3);
          badgeSelectorR(100);
          countyBtnRight.style.animation='fade-in 1s forwards';
-         rightPanel.style.display='inline';    
          countyBtnRight.style.animation='fade-in 1s forwards';
          countyBtnRight.style.display='inline';
          countyBtnLeft.style.animation='fade-in 1s forwards';
@@ -275,6 +271,9 @@ function updateCountyMain(dist){
         console.log("Hello", ainm);
           joinTeam.style.display='inline';
         joinTeam.style.animation='delay-fade-in 5s';
+        story++;
+        playGame();
+
 }
 
 
