@@ -211,16 +211,21 @@ levelSelect.style.display='block';
     function playHandler(){
           }
     var coPos = 1; //county Position
-  var imPos=1; 
+  var imPos=1;  //imreoirPosition
 function updateImreoirLv(lv){
     lv += lv*175; // {width:175} 
         imPos += lv;
 
-    imreoirWLv.style.backgroundPositionX = coPos+"px";
+    imreoirWLv.style.backgroundPositionX = imPos+"px";
     }
     
 function updateCountyMain(dist){
-        dist += dist*538; //#countyMain {width:539} 
+        
+    if (coPos===0){
+    output2.style.visibility='visible';    
+}else{
+output2.style.visibility='hidden';}
+    dist += dist*538; //#countyMain {width:539} 
         coPos += dist;
    console.log("coMain bgposX = ", coPos);
 
@@ -237,7 +242,8 @@ function updateCountyMain(dist){
         joinTeam.style.display='none';
         imreoir.style.display='none';
         output.style.display='none';
-      
+        window.location.replace("file:///home/ribo/dev/cq3/manifesto/src/naContae/naContae"+countyId+".html");
+       
         //  output2.style.display='none';
       //output new position and text:
         
@@ -273,6 +279,7 @@ function updateCountyMain(dist){
         joinTeam.style.animation='delay-fade-in 5s';
         story++;
         playGame();
+        imreoirWLv.style.left='-85%';
 
 }
 

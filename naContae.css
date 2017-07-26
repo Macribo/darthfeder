@@ -168,7 +168,7 @@ button
 #btnLvL { 
   position:relative;
  display:none;
- top:-211px;
+ top:-40px;
   left:-10%;
   height: 60px;
   width: 60px;
@@ -179,7 +179,7 @@ button
 #btnLvR {
     position:relative;
   display:none;
-  top:-211px;
+  top:-40px;
   left: 94%;
   height: 60px;
   width: 60px;
