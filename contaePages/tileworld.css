@@ -24,6 +24,12 @@ html
   background-image:url('../../../images/bg.png');
  transition: 1s background-image ease-out;
 }
+
+table
+{
+border:3px solid white;
+}
+
 .parent {
     display: flex;
     flex-direction:row;
@@ -33,7 +39,18 @@ html
 
 }
 
-
+#mapFrame {
+    display:absolute;
+    background-image:url('../../../images/mapFrame.png');
+   height:384px;
+  width:703px; 
+  z-index: 200;
+  padding-top; 10px;
+  padding-left: 10px;
+  margin-top: 145px;
+  margin-right:178px;
+ background-repeat:no-repeat;  
+}
 
 h1{
 text-align: center;
@@ -55,7 +72,7 @@ padding-bottom:0px;
 
 #output{
   left:580px;
-  top:-418px;
+  top:-530px;
   position:relative;
   text-align: center;
   color:#730a0a;
@@ -132,7 +149,7 @@ padding-bottom:0px;
 
 #player{
     position: absolute;            
-    height: 49px;
+height: 49px;
     width: 32px;
     background-image: url("../../../images/player.png");
     z-index: 50;
@@ -147,7 +164,8 @@ padding-bottom:0px;
 #left-panel
 {
   margin:20px;
-  width: 350px;
+ margin-top: 95px;
+ width: 350px;
   height: 423px;
   position: relative;
   background-image: url("../../../images/bg2.png");

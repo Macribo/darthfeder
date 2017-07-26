@@ -18,8 +18,8 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
     let randomTileVariations = createArrayOfRandomInts(100,4);
 
     function setOffsets(ox, oy){
-        grid.style.left =`${-ox % tileSize}px`;
-        grid.style.top = `${-oy % tileSize}px`;
+        grid.style.left =`${(-ox % tileSize)+500}px`;
+        grid.style.top = `${(-oy % tileSize)+180}px`;
         let sx = Math.floor(ox / tileSize);
         let sy = Math.floor(oy / tileSize);
 

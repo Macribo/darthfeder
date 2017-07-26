@@ -2,8 +2,8 @@
 
 module.exports = function Player(){
 
-    let px = 0; 
-    let py = 0;
+    let px =600; 
+    let py =400;
 
     function move(stepX, stepY){
         px += stepX;

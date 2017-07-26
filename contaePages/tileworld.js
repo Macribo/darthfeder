@@ -27,19 +27,19 @@ function mapSymbolToTerrainType(mapSymbol) {
     }[mapSymbol];// || 0; property lookup in object literal || 0
 }
 const tileSize = 32;
-const vw = 22 * 32+ 10;
-const vh = 15 * 32 + 5;
+const vw = 20 * 32+ 10;
+const vh = 10 * 32 + 5;
 let grid = document.querySelector('#grid');
 grid.style.left='200px';
 let camera = Camera(tileSize, county, grid, vw, vh, mapSymbolToTerrainType);
-
+let mapFrame = document.querySelector('#mapFrame');
 let playerElement = document.querySelector('#player');
 let player = Player();
-
+//mapFrame.style.paddingLeft='100px';
 camera.addSprite({
     updateScreenPosition: function(x, y) {
-        playerElement.style.left = x + "px";
-        playerElement.style.top = y + "px";
+        playerElement.style.left = 400+ x + "px";
+        playerElement.style.top =200+ y + "px";
     },
     getWorldPosition: function() {
         return player.getPosition();
