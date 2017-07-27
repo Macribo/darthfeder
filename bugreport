@@ -1,3 +1,10 @@
 is ainm dom too low
 cén Gaeilge atá agat doesn't show at bearla.
 
+-center character to be consistent between page refreshes
+-keep translating text
+-refactor code - required files same directory. remove duplicates
+-dump alerts. find another way for reminders.
+fix rivers
+
+lock srolling to frame or fix frame
