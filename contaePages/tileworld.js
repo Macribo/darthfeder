@@ -1,9 +1,10 @@
 //jshint esversion:6
 
-
 const Player = require("./player");
 const Camera = require("./camera");
 
+var audioAbattoir = document.querySelector('#abattoir');
+audioAbattoir.play();
 let county =document.querySelector("#mapdata").innerHTML.split('\n');
 console.log(county);
 function mapSymbolToTerrainType(mapSymbol) {
