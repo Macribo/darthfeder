@@ -1,6 +1,5 @@
 //jshint esversion:6
 
-    alert("Maith thú! Visit www.ribodev.com for more info. Slán!");
 
 const Player = require("./player");
 const Camera = require("./camera");
@@ -15,7 +14,7 @@ function mapSymbolToTerrainType(mapSymbol) {
         '|': 2,//forests
         '^': 3,//hills
         'M': 4,//mountains
-        '>': 1,//riverwater
+        'r': 1,//riverwater
         '8': 8, //Atlantic water
         '9':9,//Atlantic waves
         '0':10,//Atlantic waves

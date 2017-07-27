@@ -77,7 +77,7 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
                 if (terrainType !== undefined) {
                     // animate water
                     // let terrainVariation =0 ;
-                    if(mapSymbol === '>'){
+                    if(mapSymbol === 'r'){
                         terrainVariation = mapY;
                         terrainVariation = (terrainVariation + Math.floor(Date.now() / 500)) % 4;
                     }

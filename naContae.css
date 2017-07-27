@@ -156,8 +156,8 @@ h1
 margin:20px;
 position:relative;
 display:inline;
-left:0px;
-top:0px;
+left:100px;
+top:80px;
 width: 300px;
 height:50px;
 background:rgba(5,5,5,0.3);
@@ -172,8 +172,8 @@ position:relative;
     text-align:center;
     font-family:INFO56_0;
     font-size:40px;
-    top:500px;
-    left:0px;
+    top:90px;
+    left:100px;
 
 }
 
@@ -185,8 +185,8 @@ background-color: #207720;
 color:#ffe959;
 font-size:46;
 text-align:center;
-top:0px;
-left:0px;
+top:15px;
+left:296px;
 
 
 }
@@ -225,24 +225,22 @@ img
 #btnLvL { 
   position:relative;
  display:none;
- top:-40px;
-  left:-10%;
+ top:150px;
+  left:-100px;
   height: 60px;
   width: 60px;
   border-radius: 60px;
  background-color: green;
- z-index:75;
 }
 #btnLvR {
     position:relative;
   display:none;
-  top:-40px;
-  left: 94%;
+  top:150px;
+  left: 150px;
   height: 60px;
   width: 60px;
   border-radius: 60px;
   background-color:green;
-  z-index:75;
 }
 
 #levelSelect{
@@ -252,8 +250,8 @@ background-color: #207720;
 color:#ffe959;
 font-size:46;
 text-align:center;
-top:-130px;
-left:118px;
+top:27px;
+left:27px;
 
 
 
@@ -261,8 +259,8 @@ left:118px;
 #countyBtnLeft {
   position:relative;
   display:none;
-  top:-40px;
-  left:-10%;
+  top:150px;
+  left:-105px;
   height: 60px;
   width: 60px;
   border-radius: 60px;
@@ -272,8 +270,8 @@ left:118px;
 #countyBtnRight {
     position:relative;
   display:none;
-  top:-40px;
-  left: 94%;
+  top:150px;
+  left:160px;
   height: 60px;
   width: 60px;
   border-radius: 60px;
@@ -299,9 +297,9 @@ left:118px;
 
 #inputElements
 {
-  position: relative;
-  bottom: -250px;
-  left: 251px;
+  position:absolute;
+  bottom: 158px;
+  left: 471px;
   width: 260px;
   height:50px;
   padding: 2px 2px 2px 5px;
@@ -333,8 +331,8 @@ left:118px;
 #joinTeam{
   display:none;
   background-color: #207720;
-  top:-43px;
-  left:118px;
+  top:220px;
+  left:32px;
 	
 }
 
@@ -370,17 +368,17 @@ left:118px;
 #imreoirWLv{
     opacity: 0;
     position:relative;
-    top:-274px;
-    left:34%;
+    top:-10px;
+    left:0px;
     height:156px;
     width:175px;
-    z-index:156;
+    z-index:-1;
     background-image:url("../../images/imreoir5.png");
 }
 #countyMain {
     position:absolute;
-    top:650px;
-    left:660px;
+    top:-770px;
+    left:160px;
     background-image:url("../../images/countyMain.png");
     z-index:0;
     opacity:.25;
@@ -402,16 +400,11 @@ left:118px;
     position:relative;
     text-align: left;
     width: 601px;
-    left:200px;
+    left:32px;
     padding-left:0px; 
     font-family:INFO56_0;
-    bottom: -100px;
+    bottom: 70px;
     font-size:40px;
-}
-
-#curSiosArCo{
-bottom:130px;
-left:0px
 }
 
 .item{
@@ -424,50 +417,6 @@ left:0px
  .fadeText{
 animation: fade-in 2s;
  } 
-
-
-/**
- TILEWORLD DATA
-  **/
-#tileworld{
-    left:0px;
-    top:0px;
-display:none;}
-#mapdata {
-}
-#viewport {
-    background-color: blue;
-    opacity: 0.1;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    z-index: 10;
-    width: 10px;
-    height: 10px;
-}
-.tile {
-    width:32px; 
-    height:32px;
-    background-image: url("../../images/tileset2.png");
-    position: absolute;
-
-}
-#grid {
-    position: absolute;
-}
-#player{
-    position: absolute;            
-    height: 49px;
-    width: 32px;
-    background-image:url("../../images/player.png");
-    z-index: 31;
-}
-
-#inventory{display:none;
-}
-#inventory>*{
-    position: absolute;
-}
 
 
 @keyframes delay-fade-in{

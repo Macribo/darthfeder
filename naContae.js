@@ -54,7 +54,7 @@ var gameMessage = ``;
 
 
 var selectLevel = document.querySelector('#selectLevel');
-var imreoirWLv= document.querySelector('#imreoirWLv');//player With Grahic showing his/her lv
+var imreoirWLv= document.querySelector('#imreoirWLv');//player With Graphic showing his/her lv
 var pAinm=document.querySelector('#pAinm');
 
 //Query Selectors:
@@ -121,7 +121,7 @@ output2.innerHTML=imreoirBlurbs[blurbId];
 {
        levelSelect.style.display='none';
 }else{
-levelSelect.style.display='block';
+levelSelect.style.display='inline';
 levelSelect.style.visibility='visible';
 }
 }
@@ -135,7 +135,7 @@ if(blurbId===0)
 {
        levelSelect.style.display='none';
 }else{
-levelSelect.style.display='block';
+levelSelect.style.display='inline';
 levelSelect.style.visibility='visible';
 }
 }
@@ -144,6 +144,8 @@ levelSelect.style.visibility='visible';
           }
     var coPos = 1; //county Position
   var imPos=1;  //imreoirPosition
+
+    
 function updateImreoirLv(lv){
 
     
@@ -206,6 +208,7 @@ output2.style.visibility='hidden';}
           joinTeam.style.display='inline';
         joinTeam.style.visibility='visible';
         joinTeam.style.animation='delay-fade-in 5s';
+        countyMain.style.top='-170px';
         story++;
         playGame();
 
