@@ -7,7 +7,6 @@ function createArrayOfRandomInts(length,upperbound){
     }
     return randomNumbers;
 }
-
 module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerrainType){
 
     // minimum number of tiles to cover the
@@ -18,8 +17,8 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
     let randomTileVariations = createArrayOfRandomInts(100,4);
 
     function setOffsets(ox, oy){
-        grid.style.left =`${(-ox % tileSize)+500}px`;
-        grid.style.top = `${(-oy % tileSize)+180}px`;
+        grid.style.left =`${(-ox % tileSize)+335}px`;
+        grid.style.top = `${(-oy % tileSize)+110}px`;
         let sx = Math.floor(ox / tileSize);
         let sy = Math.floor(oy / tileSize);
 

@@ -13,7 +13,6 @@
   font-family: computer_pixel-7;
   src: url("../../../fonts/computer_pixel-7.ttf");
 }
-
 html
 {
   font-family: computer_pixel-7;
@@ -24,7 +23,6 @@ html
   background-image:url('../../../images/bg.png');
  transition: 1s background-image ease-out;
 }
-
 table
 {
 border:3px solid white;
@@ -40,15 +38,18 @@ border:3px solid white;
 }
 
 #mapFrame {
-    display:absolute;
-    background-image:url('../../../images/mapFrame.png');
-   height:440px;
-  width:760px; 
+ position:absolute;
+ display:inline;
+  background-image:url('../../../images/mapFrame.png');
+  top:78px;
+  left:305px;
+  height:512px;
+  width:832px; 
   z-index: 200;
-  padding-top; 10px;
-  padding-left: 10px;
-  margin-top: 143px;
-  margin-right:140px;
+  padding-top; 0px;
+  padding-left:0px;
+  margin-top: 0px;
+  margin-right:0px;
  background-repeat:no-repeat;  
 }
 
@@ -73,7 +74,7 @@ padding-bottom:0px;
 #output{
  width:440px;
  left:580px;
-  top:-573px;
+  top:-485px;
   position:relative;
   text-align:left;
   color:#730a0a;
@@ -103,7 +104,7 @@ padding-bottom:0px;
     height:420px;
     background-image:url("../../../images/dealbh.png");
     bottom: 6px;
-    left:4px;
+    left:-60px;
     z-index:10;
 }
 #badge{
@@ -146,6 +147,7 @@ padding-bottom:0px;
     position: absolute;
     left:10px;
     top:10px;
+    z-index:0;
 }
 
 #player{
@@ -165,13 +167,10 @@ height: 49px;
 #left-panel
 {
   margin:20px;
- margin-top: 146px;
- width: 350px;
+ margin-top: 46px;
+ width: 200px;
   height: 423px;
   position: relative;
-  background-image: url("../../../images/bg2.png");
-  background-repeat: no-repeat;
-  border:5px solid gray;
   
 }
 

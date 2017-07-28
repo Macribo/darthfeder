@@ -3,8 +3,6 @@
 const Player = require("./player");
 const Camera = require("./camera");
 
-var audioAbattoir = document.querySelector('#abattoir');
-audioAbattoir.play();
 let county =document.querySelector("#mapdata").innerHTML.split('\n');
 console.log(county);
 function mapSymbolToTerrainType(mapSymbol) {
@@ -29,15 +27,16 @@ function mapSymbolToTerrainType(mapSymbol) {
     }[mapSymbol];// || 0; property lookup in object literal || 0
 }
 const tileSize = 32;
-const vw = 20 * 32+ 10;
-const vh = 10 * 32 + 5;
+const vw = 24 * 32;
+const vh = 14 * 32;
 let grid = document.querySelector('#grid');
 grid.style.left='200px';
 let camera = Camera(tileSize, county, grid, vw, vh, mapSymbolToTerrainType);
 let mapFrame = document.querySelector('#mapFrame');
 let playerElement = document.querySelector('#player');
 let player = Player();
-//mapFrame.style.paddingLeft='100px';
+//mapFrame.style.top='100px';
+
 camera.addSprite({
     updateScreenPosition: function(x, y) {
         playerElement.style.left = 400+ x + "px";
