@@ -3,14 +3,17 @@ var output = document.querySelector('#output');
 var badge= document.querySelector('#badge');
 switch(output.innerHTML){
 
-    case("Co. Uíbh Fhailí"): badge.style.backgroundPositionX =-(80*2)+"px";
+    case("Co. Loch Garman"): badge.style.backgroundPositionX ="-240px";
         break;
-    case("Co. Lú"): badge.style.backgroundPositionX =-(80*3)+"px";
+
+    case("Co. Uíbh Fhailí"): badge.style.backgroundPositionX ="-80px";
+        break;
+    case("Co. Lú"): badge.style.backgroundPositionX =-(80*2)+"px";
         break;
     case ("Co. Luimnigh"): badge.style.backgroundPositionX =-( 80*4)+ "px";
         break;
 
-    case ("Co. Átha Chliath"): badge.style.backgroundPositionX =-( 80*5)+ "px";
+    case ("Co. Átha Cliath"): badge.style.backgroundPositionX =-( 80*5)+ "px";
         break;
     case ("Co. Liatroma"): badge.style.backgroundPositionX =-( 80*6)+ "px";
         break;
