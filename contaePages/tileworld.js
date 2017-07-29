@@ -5,6 +5,7 @@ const Camera = require("./camera");
 
 let county =document.querySelector("#mapdata").innerHTML.split('\n');
 console.log(county);
+
 function mapSymbolToTerrainType(mapSymbol) {
     return {
         '~': 1,//water
