@@ -36,6 +36,21 @@ border:3px solid white;
 .item{
 
 }
+/*places*/
+
+#places{
+   position:absolute;
+    top:23px;
+    left:16px;
+    z-index: 20;
+    opacity:1;
+    width:32px;
+    height:32px;
+    background-position-x:0px;
+
+
+}
+
 /*Show player's team badge*/
 #badgeSmall{
    position:absolute;
@@ -46,7 +61,7 @@ border:3px solid white;
     opacity:1;
     width:20px;
     height:20px;
-    background-position-x:0px
+    background-position-x:0px;
 
 
 

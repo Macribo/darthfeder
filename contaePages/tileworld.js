@@ -134,3 +134,24 @@ window.addEventListener("keydown", function(event){
 //go through inventory items.
 //if inv item has data-x and data-y attributes, (look up getAttribute on MDN)
 //add sprite at that location.
+//
+
+
+//places to visit on the map
+var places = document.querySelector('#places');
+
+var output= document.querySelector('#output');
+
+switch(output.innerHTML){
+
+    case("Co. Chorcaí"): console.log("Hello Corcaigh");
+
+        places.style.backgroundImage="url('../../../images/cork.png')";
+        
+        dropItemElement(places);
+
+        break;
+    default: console.log("hello from places.js");
+
+
+}
