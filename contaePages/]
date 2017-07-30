@@ -39,8 +39,8 @@ border:3px solid white;
 /*Show player's team badge*/
 #badgeSmall{
    position:absolute;
-    top:23px;
-    left:16px;
+    top:90px;
+    left:158px;
     background:url("../../../images/badges_small.png")0 0;
     z-index: 20;
     opacity:1;
