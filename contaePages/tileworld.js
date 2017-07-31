@@ -6,6 +6,8 @@ const Camera = require("./camera");
 let county =document.querySelector("#mapdata").innerHTML.split('\n');
 console.log(county);
 
+
+let loc1 = document.querySelector('#mapdata').instanceOf("Q");
 function mapSymbolToTerrainType(mapSymbol) {
     return {
         '~': 1,//water
@@ -22,12 +24,16 @@ function mapSymbolToTerrainType(mapSymbol) {
         't': 6,//border
         'z': 7, //surf
         'x': 12,//unreachable (grassland) 
-        '1':15,//location - having problems with location overlay. Temporary solution: hardcode locations into maps. New 
-        '2':14,//location   tileset for each county. If it works, move on, and replace with a better system TODO.
-        '3':15,//location
-        '4':16,//location
-        '5':17,//location
-        '6':18//location
+        'Q':14,//location - having problems with location overlay. Temporary solution: hardcode locations into maps. New 
+        'W':15,//location   tileset for each county. If it works, move on, and replace with a better system TODO.
+        'E':16,//location
+        'R':17,//location
+        'T':18,//location
+        'Y':19,//location
+        'U':20,//location
+        'I':21,//location
+        'O':22,//location
+        'P':23//location
         
 
 
@@ -47,7 +53,7 @@ let player = Player();
 camera.addSprite({
     updateScreenPosition: function(x, y) {
         playerElement.style.left = 400+ x + "px";
-        playerElement.style.top =200+ y + "px";
+        playerElement.style.top =100+ y + "px";
     },
     getWorldPosition: function() {
         return player.getPosition();

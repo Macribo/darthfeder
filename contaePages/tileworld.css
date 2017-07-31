@@ -61,7 +61,7 @@ border:3px solid white;
  position:absolute;
  display:inline;
   background-image:url('../../../images/mapFrame.png');
-  top:95px;
+  top:96px;
   left:319px;
   height:544px;
   width:862px; 
@@ -117,15 +117,24 @@ padding-bottom:0px;
     word-spacing:-1px;
 }
 
-
+#locationDetail{
+    position:relative;
+background-image:url("../../../images/locationDetails/corkDetails.png");
+top:86px;
+left:16px;
+width:265px;
+height:293px;
+opacity:0.75;
+}
 #shield-holder{
     position:absolute;
     width:257px;
     height:420px;
     background-image:url("../../../images/dealbh.png");
-    bottom: 6px;
-    left:-60px;
+    bottom: -130px;
+    left:-20px;
     z-index:10;
+    
 }
 #badge{
     position:absolute;
