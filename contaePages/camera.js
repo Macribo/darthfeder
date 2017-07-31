@@ -17,8 +17,8 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
     let randomTileVariations = createArrayOfRandomInts(100,4);
 
     function setOffsets(ox, oy){
-        grid.style.left =`${(-ox % tileSize)+335}px`;
-        grid.style.top = `${(-oy % tileSize)+110}px`;
+        grid.style.left =`${(-ox % tileSize)+352}px`;
+        grid.style.top = `${(-oy % tileSize)+130}px`;
         let sx = Math.floor(ox / tileSize);
         let sy = Math.floor(oy / tileSize);
 
@@ -95,7 +95,13 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
                         terrainVariation = (terrainVariation + Math.floor(Date.now()/3000)) %4;
                     
                     }
- 
+                    
+
+     
+                    
+                    
+                    //////
+
                     let backgroundPosX = -terrainVariation * tileSize;
                     let backgroundPosY = -terrainType * tileSize;
                     tile.style.backgroundPositionX = `${backgroundPosX}px`;
@@ -131,3 +137,11 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
         addSprite
     };
 };
+ 
+//get the right locations for 'o' maptiles
+var output= document.querySelector('#output'); //we can use output to determine which county places to display.
+
+              /*
+               * .tile {
+    background-image: url("../../../images/tileset2.png");
+ */ 

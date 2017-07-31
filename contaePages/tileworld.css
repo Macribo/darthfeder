@@ -36,21 +36,10 @@ border:3px solid white;
 .item{
 
 }
+
+
+
 /*places*/
-
-#places{
-   position:absolute;
-    top:23px;
-    left:16px;
-    z-index: 20;
-    opacity:1;
-    width:32px;
-    height:32px;
-    background-position-x:0px;
-
-
-}
-
 /*Show player's team badge*/
 #badgeSmall{
    position:absolute;
@@ -72,10 +61,10 @@ border:3px solid white;
  position:absolute;
  display:inline;
   background-image:url('../../../images/mapFrame.png');
-  top:78px;
-  left:305px;
-  height:512px;
-  width:832px; 
+  top:95px;
+  left:319px;
+  height:544px;
+  width:862px; 
   z-index: 200;
   padding-top; 0px;
   padding-left:0px;
@@ -171,7 +160,7 @@ padding-bottom:0px;
 .tile {
     width:32px; 
     height:32px;
-    background-image: url("../../../images/tileset2.png");
+    background-image: url("../../../images/tilesets/tilesetCork.png");
     position: absolute;
 
 }

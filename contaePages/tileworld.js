@@ -21,8 +21,14 @@ function mapSymbolToTerrainType(mapSymbol) {
         '7':11,//Atlantic waves
         't': 6,//border
         'z': 7, //surf
-        'x': 12//unreachable (grassland) 
-
+        'x': 12,//unreachable (grassland) 
+        '1':15,//location - having problems with location overlay. Temporary solution: hardcode locations into maps. New 
+        '2':14,//location   tileset for each county. If it works, move on, and replace with a better system TODO.
+        '3':15,//location
+        '4':16,//location
+        '5':17,//location
+        '6':18//location
+        
 
 
     }[mapSymbol];// || 0; property lookup in object literal || 0
@@ -137,21 +143,3 @@ window.addEventListener("keydown", function(event){
 //
 
 
-//places to visit on the map
-var places = document.querySelector('#places');
-
-var output= document.querySelector('#output');
-
-switch(output.innerHTML){
-
-    case("Co. Chorcaí"): console.log("Hello Corcaigh");
-
-        places.style.backgroundImage="url('../../../images/cork.png')";
-        
-        dropItemElement(places);
-
-        break;
-    default: console.log("hello from places.js");
-
-
-}
