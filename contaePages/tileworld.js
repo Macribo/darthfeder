@@ -7,7 +7,7 @@ let county =document.querySelector("#mapdata").innerHTML.split('\n');
 console.log(county);
 
 
-let loc1 = document.querySelector('#mapdata').instanceOf("Q");
+
 function mapSymbolToTerrainType(mapSymbol) {
     return {
         '~': 1,//water
@@ -138,7 +138,7 @@ window.addEventListener("keydown", function(event){
             dropItem();
             break;
     }
-
+playerIsAt();
     event.preventDefault();
 });
 
@@ -147,5 +147,17 @@ window.addEventListener("keydown", function(event){
 //if inv item has data-x and data-y attributes, (look up getAttribute on MDN)
 //add sprite at that location.
 //
+//location values
+var loc1Top=692;
+var loc1Bottom=724;
+var loc1Left=788;
+var loc1Right=820;
 
-
+//is player over location1?
+function playerIsAt(){
+    console.log("checking...");
+if (player.x >= loc1Left && player.x <= loc1Right){
+    if (player.y >=loc1Top && player.y <=loc1Bottom){
+    console.log("Hello location1");
+    }
+} }

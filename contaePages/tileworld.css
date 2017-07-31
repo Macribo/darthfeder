@@ -118,6 +118,7 @@ padding-bottom:0px;
 }
 
 #locationDetail{
+    visibility:hidden;
     position:relative;
 background-image:url("../../../images/locationDetails/corkDetails.png");
 top:86px;
