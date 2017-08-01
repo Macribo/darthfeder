@@ -148,16 +148,7 @@ playerIsAt();
 //add sprite at that location.
 //
 //location values
-var loc1Top=692;
-var loc1Bottom=724;
-var loc1Left=788;
-var loc1Right=820;
-
 //is player over location1?
 function playerIsAt(){
-    console.log("checking...");
-if (player.x >= loc1Left && player.x <= loc1Right){
-    if (player.y >=loc1Top && player.y <=loc1Bottom){
-    console.log("Hello location1");
-    }
-} }
+    //anBhograch
+ }

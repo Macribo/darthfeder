@@ -1,5 +1,6 @@
 //jshint esversion:6
 
+const places = require("./places");
 module.exports = function Player(){
 
     let px =1120; 
@@ -13,6 +14,11 @@ module.exports = function Player(){
     }
 
     function getPosition() {
+places();
+    if (px>960 && px<1000){
+    console.log("at an bhograch");
+  }
+
         return {x: px, y: py};
     }
     

@@ -53,6 +53,8 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
     }
 
 
+var playerTile;
+
     function updateGrid(tw, th, map, sx, sy){
         for(let tileY = 0; tileY < th; tileY++){ 
             for(let tileX = 0; tileX < tw; tileX++){
@@ -99,7 +101,6 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
 
      
                     
-                    
                     //////
 
                     let backgroundPosX = -terrainVariation * tileSize;
@@ -114,6 +115,8 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
 
             }
         }
+//playerTile=map[10][15];
+//console.log(playerTile);
     }
 
     function updateSpritePosition(sprite, ox, oy){
