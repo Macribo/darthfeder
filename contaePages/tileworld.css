@@ -116,7 +116,6 @@ padding-bottom:0px;
     line-height: 27px;
     word-spacing:-1px;
 }
-
 #deetsFrame{
     position:relative;
 background-image:url("../../../images/deetsFrame.png");
@@ -125,7 +124,7 @@ left:-25px;
 width:350px;
 height:352px;
 opacity:1;
- background-repeat:no-repeat;  
+ background-repeat:no-repeat; 
 }
 #locationDetail{
    visibility:hidden;
