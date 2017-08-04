@@ -1,5 +1,6 @@
 //jshint esversion:6
 
+var playerTile = document.querySelector('#tile13_7');
 function createArrayOfRandomInts(length,upperbound){
     let randomNumbers = Array(length);
     for (let i = 0; i<randomNumbers.length; i++){
@@ -13,6 +14,7 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
     // viewport under all circumstances
     let tw = Math.floor(vw / tileSize + 1);
     let th = Math.floor(vh / tileSize + 1);
+
     createGrid(tw, th);
     let randomTileVariations = createArrayOfRandomInts(100,4);
 
@@ -27,18 +29,19 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
     }
 
     function createGrid(tw, th){
-        //console.log(`Creating tile grid ${tw}x${th}`);
+        console.log(`Creating tile grid ${tw}x${th}`);
         for(let tileY = 0; tileY < th; tileY++){ 
             for(let tileX = 0; tileX < tw; tileX++){
                 let tile = createTile(tileX, tileY, 0,0);
-
+//console.log("Grid grid grid",grid.childElementCount);
+//console.log("grid children",grid.children);
+               // console.log("tile13_7",playerTile.getElementById('#id'));
                 grid.appendChild(tile);
             }
         }
     }
-
     function createTile(tileX, tileY, terrainType, terrainVariation ){
-        // console.log(`CreateTile ${tileX}, ${tileY}`); 
+         console.log(`CreateTile ${tileX}, ${tileY}`); 
         let tile = document.createElement("div");
         tile.setAttribute("id", `tile${tileX}_${tileY}`); //template strings
         tile.classList.add('tile');  
@@ -52,10 +55,10 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
         return tile;
     }
 
-
-var playerTile;
+var plX,plY;
 
     function updateGrid(tw, th, map, sx, sy){
+
         for(let tileY = 0; tileY < th; tileY++){ 
             for(let tileX = 0; tileX < tw; tileX++){
                 let mapY =tileY + sy;
@@ -114,9 +117,10 @@ var playerTile;
                 }
 
             }
+        //if (mapX ===4){
+          //  console.log("****************clicko");
+       // }
         }
-//playerTile=map[10][15];
-//console.log(playerTile);
     }
 
     function updateSpritePosition(sprite, ox, oy){

@@ -118,8 +118,7 @@ function dropItemElement(itemElement){
 
 window.addEventListener("keydown", function(event){
    //  console.log('keycode', event.keyCode);
-    
-    const step = 4;
+       const step = 4;
     switch(event.keyCode){
         case 38:  //up
             player.move(0, -step);
@@ -138,6 +137,10 @@ window.addEventListener("keydown", function(event){
             dropItem();
             break;
     }
+
+ 
+
+
 playerIsAt();
     event.preventDefault();
 });
@@ -150,5 +153,4 @@ playerIsAt();
 //location values
 //is player over location1?
 function playerIsAt(){
-    //anBhograch
  }
