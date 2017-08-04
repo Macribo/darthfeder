@@ -1,10 +1,9 @@
 //jshint esversion:6
 
-const places = require("./places");
 
 const camera = require("./camera");
-   
 var locationDetail = document.querySelector('#locationDetail');
+
 var mapData = document.querySelector('#mapdata').innerHTML;
 var tileSize=32;
 var mapWidth = 70*tileSize; //mapdata is 70characters wide.
@@ -13,11 +12,13 @@ var aMap1=mapData.split('\n');
 var aMap2 = [];
 
 function make2dArray(){
-    for(var i = 2; i<aMap1.length-3; i++){
+    for(var i = 0; i<aMap1.length; i++){
         aMap2.push(Array.from(aMap1[i])); 
     }
 }
 make2dArray();
+
+
 module.exports = function Player(){
 
     let px =1120; 
@@ -28,12 +29,17 @@ module.exports = function Player(){
         py += stepY;
 
         console.log("x: ",px,"y: ",py);
-        getTileByCoordinates(px,py,aMap2);
+        getTileByCoordinates(px+23,py-13,aMap2);//add ints to properly align tile and co-ordinates 
             }
 
     function getPosition() {
         return {x: px, y: py};
     }
+    return {
+        move, //expose public API containing our move function (but not updateSpritePosition)
+        getPosition
+    };
+
 
     function getTileByCoordinates(px,py,map){
 
@@ -43,9 +49,8 @@ module.exports = function Player(){
 
     }
 
-    return {
-        move, //expose public API containing our move function (but not updateSpritePosition)
-        getPosition
-    };
+
+
+
 
 };
