@@ -29,7 +29,7 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
     }
 
     function createGrid(tw, th){
-        console.log(`Creating tile grid ${tw}x${th}`);
+        //console.log(`Creating tile grid ${tw}x${th}`);
         for(let tileY = 0; tileY < th; tileY++){ 
             for(let tileX = 0; tileX < tw; tileX++){
                 let tile = createTile(tileX, tileY, 0,0);
@@ -41,7 +41,7 @@ module.exports = function Camera(tileSize, county, grid, vw, vh, mapSymbolToTerr
         }
     }
     function createTile(tileX, tileY, terrainType, terrainVariation ){
-         console.log(`CreateTile ${tileX}, ${tileY}`); 
+         //console.log(`CreateTile ${tileX}, ${tileY}`); 
         let tile = document.createElement("div");
         tile.setAttribute("id", `tile${tileX}_${tileY}`); //template strings
         tile.classList.add('tile');  

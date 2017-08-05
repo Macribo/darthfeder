@@ -3,7 +3,7 @@
 
 const camera = require("./camera");
 var locationDetail = document.querySelector('#locationDetail');
-
+var title = document.querySelector('#title');
 var mapData = document.querySelector('#mapdata').innerHTML;
 var tileSize=32;
 var mapWidth = 70*tileSize; //mapdata is 70characters wide.
@@ -11,6 +11,8 @@ var mapHeight = 30*mapData.height*tileSize; //mapdata is 30 characters high.
 var aMap1=mapData.split('\n');
 var aMap2 = [];
 var playerTile;
+var output = document.querySelector('#output').innerHTML;
+
 function make2dArray(){
     for(var i = 0; i<aMap1.length; i++){
         aMap2.push(Array.from(aMap1[i])); 
@@ -18,6 +20,7 @@ function make2dArray(){
 }
 make2dArray();
 
+var titleData=[];
 
 module.exports = function Player(){
 
@@ -53,7 +56,8 @@ module.exports = function Player(){
 function showDetail(){
     if(playerTile==="Q"){
    locationDetail.style.backgroundPositionX="0px";
-    locationDetail.style.visibility="visible";   
+    locationDetail.style.visibility="visible";
+    title.innerHTML="x";
     }
 
     if(playerTile==="W"){
@@ -102,8 +106,56 @@ function showDetail(){
     }
 
     if(playerTile==="." || playerTile==="r" || playerTile==="M" ||playerTile==="^" ){locationDetail.style.visibility="hidden";
+    title.innerHTML="";}
+
+}
+};
+
+var placeNames = [
+["","","","","","","","","",""],//0 empty to align with naContae numbers
+    ["","","","","","","","","",""],//
+    ["","","","","","","","","",""],//
+    ["","","","","","","","","",""],//
+    ["","","","","","","","","",""],//
+    ["","","","","","","","","",""],//
+    ["","","","","","","","","",""],//
+    ["","","","","","","","","",""],//
+    ["","","","","","","","","",""],//
+    ["","","","","","","","","",""],//
+    
+// naContae10 : Cork
+    ["an Bhograch","Skibbereen","Blarney","Beal na Bláth","BallyLicky","Cill na Mallach","Tigh Nua an Dhá Phota","Mainistir na Corran","Mainistir Fhear Mhaigh","Ceann tSáile"],
+    
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""],
+    ["","","","","","","","","",""]
+];
+function getCounty(output){
+    if(output==="Co. Chorcaí"){
+    titleData.push(placeNames[10]);
+        console.log("Hi placenames Cork");
     }
+    console.log("my",titleData);
 
 }
 
-};
+
+getCounty(output);

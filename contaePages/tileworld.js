@@ -4,7 +4,7 @@ const Player = require("./player");
 const Camera = require("./camera");
 
 let county =document.querySelector("#mapdata").innerHTML.split('\n');
-console.log(county);
+//console.log(county);
 
 
 

@@ -116,6 +116,20 @@ padding-bottom:0px;
     line-height: 27px;
     word-spacing:-1px;
 }
+
+#title{
+    position:absolute;
+    color:white;
+    font-size: 36px;
+    text-align:center;
+    top: 0px;
+    left:93px;
+    width: 115px;
+    z-index:32;
+    line-height: 27px;
+    
+}
+
 #deetsFrame{
     position:relative;
 background-image:url("../../../images/deetsFrame.png");
