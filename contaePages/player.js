@@ -125,17 +125,17 @@ module.exports = function Player(){
 var placeNames = [
     ["","","","","","","","","",""],//0 empty to align with naContae numbers
 
-    //1 Contae Uíḃ Ḟailí
+    //1 Contae Uíbh Fhailí
     [
 
 
         "An Féar Bán",
-        "Cluain Ṁic Nóis",
+        "Cluain Mhic Nóis",
         "Biorra",
-        "Cluain na nGaṁan",
-        "Ráth Iomġáin",
-        "Cill Aiċiḋ",
-        "An Tóċar",
+        "Cluain na nGamhan",
+        "Ráth Iomgháin",
+        "Cill Aichidh",
+        "An Tóchar",
         "Suí an Róin",
         "Dún Cairin",
         "Éadan Doire"
@@ -147,29 +147,29 @@ var placeNames = [
     [
 
         "Dún Dealgan",
-        "Baile an Ċláir",
-        "Ceann Ċloċair",
+        "Baile an Chláir",
+        "Ceann Chlochair",
         "Rinn Ḋún Áine",
-        "Baile an Ġearlánaigh",
-        "Na Creagaċa Duḃa",
+        "Baile an Ghearlánaigh",
+        "Na Creagacha Dubha",
         "An Grianfort",
-        "Mainistir Ḃuiṫe",
-        "Baile Átha Ḟirdia",
+        "Mainistir Bhuithe",
+        "Baile Átha Fhirdia",
         "Lú",
     ],
     //3 Contae Loch Garman
     [
 
         "Loch Garman",
-        "Inis Córṫaidh",
+        "Inis Córthaidh",
         "Guaire",
         "Coill an Iarainn",
         "Cill Téile",
-        "Teaċ Munna",
+        "Teach Munna",
         "Rinn Duáin ",
-        "Dún Ċormaic",
+        "Dún Chormaic",
         "Baile an Droichid",
-        "Maolán na nGaḃar"
+        "Maolán na nGabhar"
 
 
     ],
@@ -179,43 +179,43 @@ var placeNames = [
 
         "Luimneach",
         "Lios na Graí", 
-        "An Leaca Ṁór",
+        "An Leaca Mhór",
         "Brú Rí",
-        "Carraig Ċiarraí",
+        "Carraig Chiarraí",
         "Eas Géitine",
-        "Pailis Ċaonraí",
-        "Tobar Ṗádraig",
-        "Caisleán Uí Ċonaill",
+        "Pailis Chaonraí",
+        "Tobar Phádraig",
+        "Caisleán Uí Chonaill",
         "Baile na gCailleach"
     ],
-    //5 Contae  Átha Ċliath
+    //5 Contae  Átha Chliath
     [
 
-        "Duḃlinn",
+        "Dubhlinn",
         "Deilginis",
         "An Caisleán Nua",
         "Binn Éadair",
         "Cluain Dolcáin",
         "Cluain Tarbh",
-        "Fionnġlas",
+        "Fionnghlas",
         "Mullach Íde",
         "Lusca",
-        "Dún Laoiġaire"
+        "Dún Laoighaire"
     ],
     //6  Contae Liatroma
 
     [
 
-        "An Tulaċán",
+        "An Tulachán",
         "Gleann Éada",
-        "Coillte Cloċair",
+        "Coillte Clochair",
         "Cluainín ",
         "Cill Féarga",
         "Baile na gCléireach",
-        "Aċaḋ na Síleann",
+        "Achadh na Síleann",
         "Fíonach",
         "Dromad",
-        "Droim Seanḃó"
+        "Droim Seanbhó"
 
 
 
@@ -227,42 +227,42 @@ var placeNames = [
 
         "Aontroim",
         "An Baile Meánach",
-        "Baile na Mainistreaċ",
+        "Baile na Mainistreach",
         "Béal Feiriste", //born in belfast sample & JQnasc
-        "Carraig Ḟearġais",
-        "Reaċlainn",
-        "An Ḃinn Ḃán",
-        "Carn Ṁéaḃla",
-        "Aċaḋ Eoċaille",
+        "Carraig Fhearghais",
+        "Reachlainn",
+        "An Bhinn Bhán",
+        "Carn Mhéabhla",
+        "Achadh Eochaille",
         "Coill na Baice"
     ],
     //8 Contae Ḋún na nGall
 
     [
 
-        "Sléiḃte Ḋoire Ḃeatha",
-        "Sléiḃte Ġleann Doṁain",
-        "Árainn Ṁór",
-        "Na Cruaċa",
+        "Sléibhte Ḋoire Bheatha",
+        "Sléibhte Ghleann Domhain",
+        "Árainn Mhór",
+        "Na Cruacha",
         "Bealach Féich",
         "Leitir Ceanainn",
         "Cionn Dhún Damh",
-        "Bun na hAḃann",
+        "Bun na hAbhann",
         "Gleann Doimhin",
         "Cnoc Fola"
     ],
-    //9 Contae Ḟear Manaċ
+    //9 Contae Fhear Manach
 
     [
-        "Inis Ceiṫleann",
-        "Scriobaċ",
+        "Inis Ceithleann",
+        "Scriobach",
         "An Garastún",
         "Lios na Daróg",
-        "Eadarnaiḋ",
-        "Lios na Scéiṫe",
-        "Maċaire Ṁílic",
-        "Baile Ui Ċasaide",
-        "Clabaiġ",
+        "Eadarnaidh",
+        "Lios na Scéithe",
+        "Machaire Mhílic",
+        "Baile Ui Chasaide",
+        "Clabaigh",
         "Beal Leice"
     ],    
     // naContae10 : Cork
@@ -278,19 +278,19 @@ var placeNames = [
         "Ceann tSáile"
     ],
 
-    // 11 Contae Ċill Ṁantáin
+    // 11 Contae Chill Mhantáin
     [
 
-        "Cill Ṁantáin",
-        "An tInḃear Mór",
-        "Na Cloċa Liaṫa",
+        "Cill Mhantáin",
+        "An tInbhear Mór",
+        "Na Clocha Liatha",
         "Bré",
-        "Poll an Ṗúca",
-        "Cillín Ċaoimhín",
+        "Poll an Phúca",
+        "Cillín Chaoimhín",
         "Dún Ard",
-        "Siol Éalaiġ",
+        "Siol Éalaigh",
         "Cluain na nGall",  //Galloglas?
-        "Aḃóca"
+        "Abhóca"
     ],
     //12  Co. Ros Comáin
     [
@@ -301,7 +301,7 @@ var placeNames = [
         "Baile an Tobair",
         "Cluain Fada",
         "Tobar Bríde",
-        "Cnoc an Ċrocaire",
+        "Cnoc an Chrocaire",
         "Loch Bó Dearge",
         "Loch bó Finne"
 
@@ -309,41 +309,41 @@ var placeNames = [
     //13  Contae Ḋoire
     [
         "Doire",
-        "Cúil Raiṫin",
-        "Léim an Ṁadaiḋ",
+        "Cúil Raithin",
+        "Léim an Mhadaidh",
         "Dún Geimhin",
-        "Maċaire Ráṫa",
+        "Machaire Rátha",
         "Clóidigh",
-        "An Seanṁullach",
+        "An Seanmhullach",
         "Droichead Fíolta",
         "Baile Uí Rónáin",
         "Muine Mór"
     ],
 
-    //14 Contae Ṡligiġ
+    //14 Contae Shligigh
     [
-        "    Sligeaċ",
-        "Ceaṫrú an Eadain ",
+        "Sligeach",
+        "Ceathrú an Eadain ",
         "Cúil Áine",
-        "Áth an Ċláir",
+        "Áth an Chláir",
         "Iascaigh",
         "An Mullach Mór ",
         "Béal Átha na gCarraigíní",
-        "Rath an Ṁuilinn",
-        "Tobar an Ċoire",
+        "Rath an Mhuilinn",
+        "Tobar an Choire",
         "An Scrín"
     ],
 
-    //15  Contae Ṫiobraid Árann
+    //15  Contae Thiobraid Árann
     [
         "Tiobraid Árann",
-        "Ros Cré",
+        "Caiseal",
         "Durlas",
-        "Cnoc Mór na nGaiḃlte",
-        "Faiċe Ró",
+        "Cnoc Mór na nGaibhlte",
+        "Faiche Ró",
         "Sliabh na mBan",
-        "Buiríos Ó Luiġeach ",
-        "Carraig an Ċoṁraic",
+        "Ros Cré",
+        "Carraig an Chomhraic",
         "Pocán",
         "Cluain Meala"
     ],
@@ -356,85 +356,85 @@ var placeNames = [
         "Baile na Coille",
         "Eiréil ",
         "Buiríos Mór Osraí" ,//Shortcut to an Osraí eile? //linked hack and slash dungeons w.batman sfx G.
-        "Baile Ċaisleáin Ċinn Eich",
+        "Baile Chaisleáin Chinn Eich",
         "Darú",
-        "Ros Ḟionnġlaise",
-        "An Baile Fionn"
+        "Ros Fhionnghlaise",
+        "An Fraoch Mór"
     ],
-    //17 Contae Ṗort Láirge
+    //17 Contae Phort Láirge
     [
-        "Dún Garḃán",
+        "Dún Garbhán",
         "An Baile Dubh",
         "Béal na Molt ",
-        "Cill Ṁíodáin",
-        "Coill Ṁic Ṫomáisín",
-        "Dún Mór",
-        "Cuan Ṗort Lairge",
+        "Cill Mhíodáin",
+        "Coill Mhic Thomáisín",
+        "Port Láirge",
+        "Carraig na Siúire",
         "Mullach Suí Finn",
-        "Sléiḃte an Ċomaraigh",
-        "Cluain Ḟia"
+        "Sléibhte an Chomaraigh",
+        "Cluain Fhia"
 
     ],
 
-    //18 Contae Ċill Ċainniġ
+    //18 Contae Chill Chainnigh
     [
-        "Cill Ċainniġ",
-        "Ġráinseaċ Ċuffe",
-        "Dún Garḃáin",
-        "Baile Ṁic Andáin",
-        "Cnoc Ḃreanáil",
-        "Ros Ṁic Ṫriúin",
+        "Cill Chainnigh",
+        "Ghráinseach Chuffe",
+        "Dún Garbháin",
+        "Baile Mhic Andáin",
+        "Cnoc Bhreanáil",
+        "Ros Mhic Thriúin",
         "An Gleann Mór",
-        "Muileann an Ḃata" ,//where all the people carry ṡticks?",
-        "Bearna na Gaoiṫe",
-        "Sliaḃ Rua"
+        "Muileann an Bhata" ,//where all the people carry ṡticks?",
+        "Bearna na Gaoithe",
+        "Sliabh Rua"
     ],
 
     //19 Contae Na Mí
     [
         "Teamhair",
         "An Uaimh",
-        "Baile Áṫa Troim",
+        "Baile Átha Troim",
         "Baile an Locha",
-        "Baile Ṡláine",
+        "Baile Shláine",
         "An Inse",
         "Tigh na Sióg",
-        "Cill Ḃríde",
-        "Ráth Ċairn",
-        "Buaile na Bréachṁaí ",
+        "Cill Bhríde",
+        "Ráth Chairn",
+        "Buaile na Bréachmhaí ",
 
     ],
-    //20 Contae Ċiarraí
+    //20 Contae Chiarraí
     [
-        "Na Cruaċa Duḃa",
-        "Ċill Airne",
+        "Na Cruacha Dubha",
+        "Chill Airne",
         "An tSnaidhm",
         "An Daingean ",
         "Neidín ",
-        "Cathair Saiḋḃín",
+        "Cathair Saidhbhín",
         "Trá Lí",
-        "Tuath Ó Siasta",
+        "Lios Tuathail",
         "Sliabh Mis",
-        "Corca Ḋuiḃne",
+        "Tuath Ó Siasta",
 
     ],
 
     //21 Contae An LongFoirt
     [
         "An LongFort",
-        "Maiġ Duṁa",
+        "Maigh Dumha",
         "Droim Lis ",
         "An Lios Breac",
         "Cluain Dá Ráth",
-        "An Ċarraig Ḃuí",
+        "An Charraig Bhuí",
         "Gránard",
         "Ardach",
-        "Baile Uí Ṁaṫáin",
+        "Baile Uí Mhatháin",
         "Cill na Sí"  //fairy ring to cleite's Ceist III?",
 
     ],
 
-    //22 Contae Ṁaigh Eo
+    //22 Contae Mhaigh Eo
     [
         "Oileán Acaill",
         "An Fód Dubh",
@@ -444,19 +444,19 @@ var placeNames = [
         "An Éill",
         "Coill an tSiáin",
         "Cathair na Mart",
-        "Baile Ui Ḟiacáin",
-        "Caisleán an Ḃarraiġ",
+        "Beal an Átha",
+        "Caisleán an Dumha",
     ],
 
-    //23 Contae Na hIarṁí
+    //23 Contae Na hIarmhí
     [
         "An Muileann gCearr",
-        "Ráth Ḟearna",
-        "Beal Átha na nGaḃar",
-        "Cill Ḃeagáin",
+        "Ráth Fhearna",
+        "Beal Átha na nGabhar",
+        "Cill Bheagáin",
         "Ráth Conarta",
         "Baile na gCailleach",
-        "Ráth Eoġain",
+        "Ráth Eoghain",
         "Na Colúir",
         "An Teanga",
         "Baile Átha Luain",
@@ -465,73 +465,73 @@ var placeNames = [
 
     //24 Contae An Dúin
     [
-        "An Caisleán Riaḃach",
-        "An Ṁainistir Liath",
-        "Port an Ṗeire",
+        "An Caisleán Riabhach",
+        "An Mhainistir Liath",
+        "Port an Pheire",
         "Baile Loch Cuan",
         "Dún Pádraig",
-        "Cill Ċaoil",
+        "Cill Chaoil",
         "An tIúr",
         "Droichead na Banna",
         "An Lorgain",
-        "Lios na gCearrḃach",
+        "Lios na gCearrbhach",
     ],
 
-    //25 Contae Ard Ṁaċa
+    //25 Contae Ard Mhacha
     [
-        "Ard Ṁaċa",
+        "Ard Mhacha",
         "Port An Dúnáin",
-        "Crois Ṁic Lionnáin",
+        "Crois Mhic Lionnáin",
         "Lios Liath",
         "Sráid na nAlbanach",
         "Craigavon",
-        "Baile an Ṁuilinn",
+        "Baile an Mhuilinn",
         "Baile Úr",
     ],
-    //26 Contae Ċeaṫarlaċ
+    //26 Contae Cheatharlach
     [
-        "Ceaṫarlaċ",
+        "Ceatharlach",
         "Cill Deirge",
         "An Tulach",
-        "Ráth Ḃile ",
+        "Ráth Bhile ",
         "Cill Téagáin",
-        "Fionnṁaċ",
-        "Muine Ḃeag",
-        "An Ḃuiríos",
-        "Na Staiġhrí Duḃa",
-        "Baile Uí Ṁurċú",
-        "Seanleiṫġlinn",
+        "Fionnmhach",
+        "Muine Bheag",
+        "An Bhuiríos",
+        "Na Staighhrí Dubha",
+        "Baile Uí Mhurchú",
+        "Seanleithghlinn",
     ],
 
-    //27 Contae Ṁuineaċáin
+    //27 Contae Mhuineacháin
     [
-        "Muineaċán",
-        "Carraig Ṁaċaire Rois",
+        "Muineachán",
+        "Carraig Mhachaire Rois",
         "Teach an Scotaigh",
         "Cluain Eois",
         "Tigh Domhnata",
         "Scairbh na gCaorach",
         "Caisleán an tSiáin",
-        "Einistir Ḃuithe",
-        "An Ṁainistir Ṁóranaigh Ġeala",
+        "Einistir Bhuithe",
+        "An Mhainistir Mhóranaigh Gheala",
         "Crícheán Rua",
     ],
 
 
-    // 28 Contae na Gailliṁe
+    // 28 Contae na Gaillimhe
     [
-        "Gailliṁ",
+        "Gaillimh",
         "Tuaim",
         "Gleann na Madadh",
         "An Teach Dóite",
         "Inis Bó Finne",
         "An Spidéal ",
-        "An Ċeaṫrú Rua",
+        "An Cheathrú Rua",
         "Inis Mór",
         "Inis Meáin", 
         "Inis Óirr"
     ],
-    //29 Contae Ċill Dara
+    //29 Contae Chill Dara
     [
         "Cill Dara",
         "Cairbre",
@@ -539,15 +539,15 @@ var placeNames = [
         "Díseart Diarmada",
         "Maigh Géine",
         "Na Solláin",
-        "Léim an Ḃradáin",
+        "Léim an Bhradáin",
         "Maigh Nuad",
-        "Fioḋ Alúine",
+        "Fiodh Alúine",
         "An Nás"
     ],
-    //30 Contae An Ċláir
+    //30 Contae An Chláir
     [
         "Fíoch Rua",
-        "Baile Uí Ḃeacáin",
+        "Baile Uí Bheacáin",
         "Ceann Boirne",
         "Ceann Caillí",
         "Poll na nOisrí",
@@ -558,28 +558,28 @@ var placeNames = [
         "Bun Raite"
 
     ],
-    //Contae An Caḃáin
+    //Contae An Cabháin
 
     [
-        "An Caḃán",
+        "An Cabhán",
         "Dún an Rí",
         "Lios Cré",
-        "An Lios Duḃ",
+        "An Lios Dubh",
         "Béal Tairbirt",
         "An Cnoc Rua",
         "An Muileann Iarainn",
-        "Gob an Ṁianaiġ",
-        "Doire na Criaḋ",
+        "Gob an Mhianaigh",
+        "Doire na Criadh",
         "An Dromainn"
     ],
-    //32 Contae Ṫír Eoghain
+    //32 Contae Thír Eoghain
     [
         "An Ómaigh",
         "Dún Geanainn",
-        "An Ċorr Ċríochach",
+        "An Chorr Chríochach",
         "Caisleán na Deirge",
         "Muileann an tSiáin",
-        "An Sraṫ Bán",
+        "An Srath Bán",
         "Baile Mhic Gofraidh",
         "An Chrannóg",
         "An Caisleán Glas",
@@ -587,15 +587,245 @@ var placeNames = [
     ]
 ];
 function getCounty(output){
-    if(output==="Co. Chorcaí"){
-        for(var i = 0; i< placeNames[10].length; i++){
+    if(output==="Co. Uíbh Fhailí"){
+        for(var i = 0; i< placeNames[1].length; i++){
 
-            titleData.push(placeNames[10][i]);
+            titleData.push(placeNames[1][i]);
 
         }
-        console.log("Hi placenames Cork");
     }
-    console.log("my",titleData);
+    if(output==="Co. Lú"){
+        for(var j = 0; j< placeNames[2].length; j++){
+
+            titleData.push(placeNames[2][j]);
+
+        }
+    }
+
+    if(output==="Co. Luimnigh"){
+        for(var k = 0; k< placeNames[10].length; k++){
+
+            titleData.push(placeNames[10][k]);
+
+        }
+    }
+
+    if(output==="Co. Átha Chliath"){
+        for(var l = 0; l< placeNames[10].length; l++){
+
+            titleData.push(placeNames[10][l]);
+
+        }
+    }
+
+    if(output==="Co. Liatroma"){
+        for(var m = 0; m< placeNames[10].length; m++){
+
+            titleData.push(placeNames[10][m]);
+
+        }
+    }
+
+    if(output==="Co. Aontroma"){
+        for(var n = 0; n< placeNames[10].length; n++){
+
+            titleData.push(placeNames[10][n]);
+
+        }
+    }
+
+    if(output==="Co. Dhún na nGall"){
+        for(var o = 0; o< placeNames[10].length; o++){
+
+            titleData.push(placeNames[10][o]);
+
+        }
+    }
+
+    if(output==="Co. Fhear Manach"){
+        for(var p = 0; p< placeNames[10].length; p++){
+
+            titleData.push(placeNames[10][p]);
+
+        }
+    }
+
+    if(output==="Co. Chorcaí"){
+        for(var q = 0; q< placeNames[10].length; q++){
+
+            titleData.push(placeNames[10][q]);
+
+        }
+    }
+
+    if(output==="Co. Chill Mhantáin"){
+        for(var r = 0; r< placeNames[10].length; r++){
+
+            titleData.push(placeNames[10][r]);
+
+        }
+    }
+
+    if(output==="Co. Ros Comáin"){
+        for(var s = 0; s< placeNames[10].length; s++){
+
+            titleData.push(placeNames[10][s]);
+
+        }
+    }
+
+    if(output==="Co. Dhoire"){
+        for(var t = 0; t< placeNames[10].length; t++){
+
+            titleData.push(placeNames[10][t]);
+
+        }
+    }
+
+    if(output==="Co. Shligigh"){
+        for(var u = 0; u< placeNames[10].length; u++){
+
+            titleData.push(placeNames[10][u]);
+
+        }
+    }
+
+    if(output==="Co. Thiobraid Árann"){
+        for(var v = 0; v< placeNames[10].length; v++){
+
+            titleData.push(placeNames[10][v]);
+
+        }
+    }
+
+    if(output==="Co. Laoise"){
+        for(var w = 0; w< placeNames[10].length; w++){
+
+            titleData.push(placeNames[10][w]);
+
+        }
+    }
+
+    if(output==="Co. Phort Láirge"){
+        for(var x = 0; x< placeNames[10].length; x++){
+
+            titleData.push(placeNames[10][x]);
+
+        }
+    }
+
+    if(output==="Co. Chill Chainnigh"){
+        for(var y = 0; y< placeNames[10].length; y++){
+
+            titleData.push(placeNames[10][y]);
+
+        }
+    }
+
+    if(output==="Co. Na Mí"){
+        for(var z = 0; z< placeNames[10].length; z++){
+
+            titleData.push(placeNames[10][z]);
+
+        }
+    }
+
+    if(output==="Co. Chiarraí"){
+        for(var a = 0; a< placeNames[10].length; a++){
+
+            titleData.push(placeNames[10][a]);
+
+        }
+    }
+
+    if(output==="Co. An Longfoirt"){
+        for(var b = 0; b< placeNames[10].length; b++){
+
+            titleData.push(placeNames[10][b]);
+
+        }
+    }
+
+    if(output==="Co. Mhaigh Eo"){
+        for(var c = 0; c< placeNames[22].length; c++){
+
+            titleData.push(placeNames[22][c]);
+
+        }
+    }
+
+    if(output==="Co. Na hIarmhí"){
+        for(var d = 0; d< placeNames[10].length; d++){
+
+            titleData.push(placeNames[10][d]);
+
+        }
+    }
+
+    if(output==="Co. An Dúin"){
+        for(var e = 0; e< placeNames[10].length; e++){
+
+            titleData.push(placeNames[10][e]);
+
+        }
+    }
+
+    if(output==="Co. Ard Mhacha"){
+        for(var f = 0; f< placeNames[10].length; f++){
+
+            titleData.push(placeNames[10][f]);
+
+        }
+    }
+
+    if(output==="Co. Cheatharlach"){
+        for(var g = 0; g< placeNames[10].length; g++){
+
+            titleData.push(placeNames[10][g]);
+
+        }
+    }
+
+    if(output==="Co. Mhuineacháin"){
+        for(var h = 0; h< placeNames[10].length; h++){
+
+            titleData.push(placeNames[10][h]);
+
+        }
+    }
+
+    if(output==="Co. na Gaillimhe"){
+        for(var aa = 0;aa< placeNames[10].length;aa++){
+
+            titleData.push(placeNames[10][aa]);
+
+        }
+    }
+
+    if(output==="Co. Chill Dara"){
+        for(var ab = 0; ab< placeNames[10].length; ab++){
+
+            titleData.push(placeNames[10][ab]);
+
+        }
+    }
+
+    if(output==="Co. An Chláir"){
+        for(var ac = 0; ac< placeNames[10].length; ac++){
+
+            titleData.push(placeNames[10][ac]);
+
+        }
+    }
+
+    if(output==="Co. Thír Eoghain"){
+        for(var ad = 0; ad< placeNames[10].length; ad++){
+
+            titleData.push(placeNames[10][ad]);
+
+        }
+    }
+
 
 }
 
