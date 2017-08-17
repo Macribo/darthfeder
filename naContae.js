@@ -37,7 +37,7 @@ let blurbId =0;
 
 map[0] = "";
 map[1] = "";
-map[2] = "Roghnaigh Ainm";
+map[2] = "Cad is ainm dhuit?";
 map[3] = "Roghnaigh Gaeilge";
 map[4] = "Roghnaigh Foireann";
 map[5] = "";
@@ -190,9 +190,11 @@ output2.style.visibility='hidden';}
          btnLvL.style.display='none';
          levelSelect.style.display='none';
          //reveal hidden inputElements
-       inputElements.style.visibility='visible';    
-      inputElements.style.opacity='1'; 
-       //inputLabel.style.display='block';
+         inputElements.style.visibility='visible';    
+        inputElements.style.opacity='1';
+        inputElements.style.left='561px';
+        inputElements.style.bottom='260px';
+        //inputLabel.style.display='block';
        //inputLabel.innerHTML='Roghnaigh Foireann:';
         
         badgeSelectorL(100); //player selects team
