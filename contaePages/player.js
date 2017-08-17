@@ -12,7 +12,9 @@ var aMap1=mapData.split('\n');
 var aMap2 = [];
 var playerTile;
 var output = document.querySelector('#output').innerHTML;
+var whichBorder;
 
+var tileset= document.getElementsByClassName('tile')[0];
 function make2dArray(){
     for(var i = 0; i<aMap1.length; i++){
         aMap2.push(Array.from(aMap1[i])); 
@@ -53,7 +55,7 @@ module.exports = function Player(){
 
     }
 
-    function showDetail(){
+    function showDetail(){//shows detail of location, and also handles border crossings
         if(playerTile==="Q"){
             locationDetail.style.backgroundPositionX="0px";
             locationDetail.style.visibility="visible";
@@ -116,11 +118,16 @@ module.exports = function Player(){
 
         if(playerTile==="." || playerTile==="r" || playerTile==="M" ||playerTile==="^" ){locationDetail.style.visibility="hidden";
             title.innerHTML="";}
-
+if(playerTile==="H"||playerTile==="J"||playerTile==="K"||playerTile==="L"||playerTile==="F"||playerTile==="G"){
+    whichBorder= playerTile;
+    crossBorder(whichBorder);
+}
     }
 };
 
-
+function crossBorder(whichBorder){
+    alert(whichBorder);
+}
 
 var placeNames = [
     ["","","","","","","","","",""],//0 empty to align with naContae numbers
@@ -191,7 +198,7 @@ var placeNames = [
     //5 Contae  Átha Chliath
     [
 
-        "Dubhlinn",
+        "Baile Átha Cliath",
         "Deilginis",
         "An Caisleán Nua",
         "Binn Éadair",
@@ -602,50 +609,60 @@ function getCounty(output){
         }
     }
 
-    if(output==="Co. Luimnigh"){
-        for(var k = 0; k< placeNames[10].length; k++){
+    if(output==="Co. Loch Garman"){
+        for(var af = 0; af< placeNames[3].length; af++){
 
-            titleData.push(placeNames[10][k]);
+            titleData.push(placeNames[3][af]);
 
         }
     }
 
-    if(output==="Co. Átha Chliath"){
-        for(var l = 0; l< placeNames[10].length; l++){
 
-            titleData.push(placeNames[10][l]);
+    if(output==="Co. Luimnigh"){
+        for(var k = 0; k< placeNames[4].length; k++){
+
+            titleData.push(placeNames[4][k]);
 
         }
+    }
+
+    if(output==="Co. Átha Cliath"){
+        for(var l = 0; l< placeNames[5].length; l++){
+
+            titleData.push(placeNames[5][l]);
+
+        }
+        
     }
 
     if(output==="Co. Liatroma"){
-        for(var m = 0; m< placeNames[10].length; m++){
+        for(var m = 0; m< placeNames[6].length; m++){
 
-            titleData.push(placeNames[10][m]);
+            titleData.push(placeNames[6][m]);
 
         }
     }
 
     if(output==="Co. Aontroma"){
-        for(var n = 0; n< placeNames[10].length; n++){
+        for(var n = 0; n< placeNames[7].length; n++){
 
-            titleData.push(placeNames[10][n]);
+            titleData.push(placeNames[7][n]);
 
         }
     }
 
     if(output==="Co. Dhún na nGall"){
-        for(var o = 0; o< placeNames[10].length; o++){
+        for(var o = 0; o< placeNames[8].length; o++){
 
-            titleData.push(placeNames[10][o]);
+            titleData.push(placeNames[8][o]);
 
         }
     }
 
     if(output==="Co. Fhear Manach"){
-        for(var p = 0; p< placeNames[10].length; p++){
+        for(var p = 0; p< placeNames[9].length; p++){
 
-            titleData.push(placeNames[10][p]);
+            titleData.push(placeNames[9][p]);
 
         }
     }
@@ -659,89 +676,89 @@ function getCounty(output){
     }
 
     if(output==="Co. Chill Mhantáin"){
-        for(var r = 0; r< placeNames[10].length; r++){
+        for(var r = 0; r< placeNames[11].length; r++){
 
-            titleData.push(placeNames[10][r]);
+            titleData.push(placeNames[11][r]);
 
         }
     }
 
     if(output==="Co. Ros Comáin"){
-        for(var s = 0; s< placeNames[10].length; s++){
+        for(var s = 0; s< placeNames[12].length; s++){
 
-            titleData.push(placeNames[10][s]);
+            titleData.push(placeNames[12][s]);
 
         }
     }
 
     if(output==="Co. Dhoire"){
-        for(var t = 0; t< placeNames[10].length; t++){
+        for(var t = 0; t< placeNames[13].length; t++){
 
-            titleData.push(placeNames[10][t]);
+            titleData.push(placeNames[13][t]);
 
         }
     }
 
     if(output==="Co. Shligigh"){
-        for(var u = 0; u< placeNames[10].length; u++){
+        for(var u = 0; u< placeNames[14].length; u++){
 
-            titleData.push(placeNames[10][u]);
+            titleData.push(placeNames[14][u]);
 
         }
     }
 
     if(output==="Co. Thiobraid Árann"){
-        for(var v = 0; v< placeNames[10].length; v++){
+        for(var v = 0; v< placeNames[15].length; v++){
 
-            titleData.push(placeNames[10][v]);
+            titleData.push(placeNames[15][v]);
 
         }
     }
 
     if(output==="Co. Laoise"){
-        for(var w = 0; w< placeNames[10].length; w++){
+        for(var w = 0; w< placeNames[16].length; w++){
 
-            titleData.push(placeNames[10][w]);
+            titleData.push(placeNames[16][w]);
 
         }
     }
 
     if(output==="Co. Phort Láirge"){
-        for(var x = 0; x< placeNames[10].length; x++){
+        for(var x = 0; x< placeNames[17].length; x++){
 
-            titleData.push(placeNames[10][x]);
+            titleData.push(placeNames[17][x]);
 
         }
     }
 
     if(output==="Co. Chill Chainnigh"){
-        for(var y = 0; y< placeNames[10].length; y++){
+        for(var y = 0; y< placeNames[18].length; y++){
 
-            titleData.push(placeNames[10][y]);
+            titleData.push(placeNames[18][y]);
 
         }
     }
 
     if(output==="Co. Na Mí"){
-        for(var z = 0; z< placeNames[10].length; z++){
+        for(var z = 0; z< placeNames[19].length; z++){
 
-            titleData.push(placeNames[10][z]);
+            titleData.push(placeNames[19][z]);
 
         }
     }
 
     if(output==="Co. Chiarraí"){
-        for(var a = 0; a< placeNames[10].length; a++){
+        for(var a = 0; a< placeNames[20].length; a++){
 
-            titleData.push(placeNames[10][a]);
+            titleData.push(placeNames[20][a]);
 
         }
     }
 
     if(output==="Co. An Longfoirt"){
-        for(var b = 0; b< placeNames[10].length; b++){
+        for(var b = 0; b< placeNames[21].length; b++){
 
-            titleData.push(placeNames[10][b]);
+            titleData.push(placeNames[21][b]);
 
         }
     }
@@ -755,73 +772,81 @@ function getCounty(output){
     }
 
     if(output==="Co. Na hIarmhí"){
-        for(var d = 0; d< placeNames[10].length; d++){
+        for(var d = 0; d< placeNames[23].length; d++){
 
-            titleData.push(placeNames[10][d]);
+            titleData.push(placeNames[23][d]);
 
         }
     }
 
     if(output==="Co. An Dúin"){
-        for(var e = 0; e< placeNames[10].length; e++){
+        for(var e = 0; e< placeNames[24].length; e++){
 
-            titleData.push(placeNames[10][e]);
+            titleData.push(placeNames[24][e]);
 
         }
     }
 
     if(output==="Co. Ard Mhacha"){
-        for(var f = 0; f< placeNames[10].length; f++){
+        for(var f = 0; f< placeNames[25].length; f++){
 
-            titleData.push(placeNames[10][f]);
+            titleData.push(placeNames[25][f]);
 
         }
     }
 
     if(output==="Co. Cheatharlach"){
-        for(var g = 0; g< placeNames[10].length; g++){
+        for(var g = 0; g< placeNames[26].length; g++){
 
-            titleData.push(placeNames[10][g]);
+            titleData.push(placeNames[26][g]);
 
         }
     }
 
     if(output==="Co. Mhuineacháin"){
-        for(var h = 0; h< placeNames[10].length; h++){
+        for(var h = 0; h< placeNames[27].length; h++){
 
-            titleData.push(placeNames[10][h]);
+            titleData.push(placeNames[27][h]);
 
         }
     }
 
     if(output==="Co. na Gaillimhe"){
-        for(var aa = 0;aa< placeNames[10].length;aa++){
+        for(var aa = 0;aa< placeNames[28].length;aa++){
 
-            titleData.push(placeNames[10][aa]);
+            titleData.push(placeNames[28][aa]);
 
         }
     }
 
     if(output==="Co. Chill Dara"){
-        for(var ab = 0; ab< placeNames[10].length; ab++){
+        for(var ab = 0; ab< placeNames[29].length; ab++){
 
-            titleData.push(placeNames[10][ab]);
+            titleData.push(placeNames[29][ab]);
 
         }
     }
 
     if(output==="Co. An Chláir"){
-        for(var ac = 0; ac< placeNames[10].length; ac++){
+        for(var ac = 0; ac< placeNames[30].length; ac++){
 
-            titleData.push(placeNames[10][ac]);
+            titleData.push(placeNames[30][ac]);
+
+        }
+    }
+    if(output==="Co. An Cabháin"){
+        for(var ae = 0; ae< placeNames[31].length; ae++){
+
+            titleData.push(placeNames[31][ae]);
 
         }
     }
 
-    if(output==="Co. Thír Eoghain"){
-        for(var ad = 0; ad< placeNames[10].length; ad++){
 
-            titleData.push(placeNames[10][ad]);
+    if(output==="Co. Thír Eoghain"){
+        for(var ad = 0; ad< placeNames[32].length; ad++){
+
+            titleData.push(placeNames[32][ad]);
 
         }
     }

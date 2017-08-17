@@ -169,7 +169,6 @@ output2.style.visibility='hidden';}
     countyMain.style.backgroundPositionX = coPos+"px";
     }
     function joinTeamHandler(){
-        inputElements.style.display='none';
         countyMain.style.animation='fade-out 2s forwards';
         console.log("team joined",contae[countyId]);
         countyBtnRight.style.display='none';
@@ -192,7 +191,7 @@ output2.style.visibility='hidden';}
          levelSelect.style.display='none';
          //reveal hidden inputElements
        inputElements.style.visibility='visible';    
-        
+      inputElements.style.opacity='1'; 
        //inputLabel.style.display='block';
        //inputLabel.innerHTML='Roghnaigh Foireann:';
         
@@ -225,8 +224,9 @@ output2.style.visibility='hidden';}
     
        audioAbattoir.play();
         //Hide irrelevent buttons
-       inputElements.style.visibility='hidden';    
-       htmla.style.backgroundImage ="url('../../images/bgDark.png')";            
+       //inputElements.style.visibility='hidden';    
+      inputElements.style.opacity='1';
+        htmla.style.backgroundImage ="url('../../images/bgDark.png')";            
        inputName.style.display='none';
        inputLabel.style.display='none';
        ainmBtn.style.display='none';

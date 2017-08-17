@@ -21,7 +21,12 @@ function mapSymbolToTerrainType(mapSymbol) {
         '9':9,//Atlantic waves
         '0':10,//Atlantic waves
         '7':11,//Atlantic waves
-        't': 6,//border
+        'F': 6,//border
+        'G': 6,//border
+        'H': 6,//border
+        'J': 6,//border
+        'K': 6,//border
+        'L': 6,//border
         'z': 7, //surf
         'x': 12,//unreachable (grassland) 
         'Q':14,//location - having problems with location overlay. Temporary solution: hardcode locations into maps. New 

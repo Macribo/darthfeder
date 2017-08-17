@@ -296,7 +296,7 @@ left:27px;
 
 
 #inputElements
-{
+{ opacity:0;
   position:absolute;
   bottom: 158px;
   left: 471px;
@@ -366,7 +366,6 @@ left:27px;
 }
 
 #imreoirWLv{
-    opacity: 0;
     position:relative;
     top:-10px;
     left:0px;
