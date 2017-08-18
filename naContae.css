@@ -264,7 +264,7 @@ left:189px;
   position:relative;
   display:none;
   top:150px;
-  left:-105px;
+  left:30px;
   height: 60px;
   width: 60px;
   border-radius: 60px;
@@ -275,7 +275,7 @@ left:189px;
     position:relative;
   display:none;
   top:150px;
-  left:160px;
+  left:350px;
   height: 60px;
   width: 60px;
   border-radius: 60px;
@@ -394,13 +394,12 @@ left:189px;
 }
 #countyMain {
     position:absolute;
-    top:-770px;
-    left:160px;
+    top:139px;
+    left:638px;
     background-image:url("../../images/countyMain.png");
-    z-index:200;
-    opacity:.25;
-    width:539px;
-    height:383px;
+    opacity:1;
+    width:403px;
+    height:306px;
 }
 #badge{
     position:absolute;

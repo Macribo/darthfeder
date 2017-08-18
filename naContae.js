@@ -67,7 +67,7 @@ let contae = document.querySelector("#contae");
 var output = document.querySelector("#output");
 var output2 = document.querySelector("#output2");
 var inputLabel = document.querySelector("#inputLabel");
-
+var tidyBox1 = document.querySelector("#tidyBox1");
 var levelSelect = document.querySelector('#levelSelect');
 var playBtn = document.querySelector('#play');
 var countyBtnRight = document.querySelector('#countyBtnRight');
@@ -163,7 +163,7 @@ function updateCountyMain(dist){
     output2.style.visibility='visible';    
 }else{
 output2.style.visibility='hidden';}
-    dist += dist*538; //#countyMain {width:539} 
+    dist += dist*431; //#countyMain {width:400} 
         coPos += dist;
    console.log("coMain bgposX = ", coPos);
 
@@ -197,11 +197,10 @@ output2.style.visibility='hidden';}
         inputElements.style.bottom='260px';
         //inputLabel.style.display='block';
        //inputLabel.innerHTML='Roghnaigh Foireann:';
-       imreoirWLv.style.top='40px';
-       imreoirWLv.style.left='-483px';
+       imreoirWLv.style.top='57px';
+       imreoirWLv.style.left='530px';
 
         badgeSelectorL(100); //player selects team
-         countyMain.style.top='50px';
          narrate(3);
          badgeSelectorR(100);
          countyBtnRight.style.animation='fade-in 1s forwards';
@@ -210,9 +209,12 @@ output2.style.visibility='hidden';}
          countyBtnLeft.style.animation='fade-in 1s forwards';
          countyBtnLeft.style.display='inline';
           joinTeam.style.display='inline';
+        joinTeam.style.left='-444px';
+        joinTeam.style.top='332px';
         joinTeam.style.visibility='visible';
         joinTeam.style.animation='delay-fade-in 5s';
-        countyMain.style.top='-170px';
+        //countyMain.style.top='-170px';
+  tidyBox1.style.backgroundColor="rgba(255,255,255,0.02)";
         story++;
         playGame();
 
@@ -343,3 +345,5 @@ contae.innerHTML = countyNames[countyId];
 
 
 };
+
+//18865 x 383

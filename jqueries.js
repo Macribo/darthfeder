@@ -27,7 +27,8 @@ document.querySelector('#inputName').onmouseenter=(event)=>{
     document.querySelector('#bearla').innerHTML='Océ!';
 }; 
 document.querySelector('#ainmBtn');   
-              $('#inputLabel span').hover(function(){
+document.querySelector('#levelSelect');
+$('#inputLabel span').hover(function(){
              $('#bearla').text($(this).attr('id'));
              $(this).css('color','#e35ee5');
     });
@@ -52,5 +53,11 @@ $('#ainmBtn').click(function(){
 
     });
 });
+
+$('#levelSelect').click(function(){
+    console.log("hello from jqueries");
+    clickCounter++;
+    });
+
 });
 
