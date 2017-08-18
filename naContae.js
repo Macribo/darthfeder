@@ -19,7 +19,7 @@ window.onload=function(){
 */
 
 
-let badgeSelectorL = require("./badge-selector-l");
+let badgeSelectorL =require("./badge-selector-l");
 let badgeSelectorR = require("./badge-selector-r");
 let storyTexts = require("./story-texts"); //can't use capital letters with browswerify 
 let titleTexts = require("./title-texts");
@@ -213,6 +213,8 @@ output2.style.visibility='hidden';}
         joinTeam.style.top='332px';
         joinTeam.style.visibility='visible';
         joinTeam.style.animation='delay-fade-in 5s';
+        contae.style.left='252';
+        contae.style.bottom='-267';
         //countyMain.style.top='-170px';
   tidyBox1.style.backgroundColor="rgba(255,255,255,0.02)";
         story++;
