@@ -22,6 +22,7 @@ window.onload=function(){
 let badgeSelectorL = require("./badge-selector-l");
 let badgeSelectorR = require("./badge-selector-r");
 let storyTexts = require("./story-texts"); //can't use capital letters with browswerify 
+let titleTexts = require("./title-texts");
 let countyNames = require("./county-names");
 //Create the map
 
@@ -29,7 +30,7 @@ let story = 0;
 
 var map = [];
 
-let imreoirBlurbs=['Roghnaigh leibheal Gaeilge','Níl Gaeilge agam','Tá beagán Gaeilge agam','Tá Gaeilge agam','Cainteoir Líofa mé'];
+let imreoirBlurbs=['I won\'t try.','Níl Gaeilge agam','Tá beagán Gaeilge agam','Tá Gaeilge agam','Cainteoir Líofa mé'];
 let blurbId =0;
 
 
@@ -60,7 +61,7 @@ var pAinm=document.querySelector('#pAinm');
 //Query Selectors:
 var joinTeam = document.querySelector("#joinTeam");
 var image = document.querySelector("img");
-
+var portrait = document.querySelector("#portrait");
 let contae = document.querySelector("#contae");
 
 var output = document.querySelector("#output");
@@ -196,7 +197,9 @@ output2.style.visibility='hidden';}
         inputElements.style.bottom='260px';
         //inputLabel.style.display='block';
        //inputLabel.innerHTML='Roghnaigh Foireann:';
-        
+       imreoirWLv.style.top='40px';
+       imreoirWLv.style.left='-483px';
+
         badgeSelectorL(100); //player selects team
          countyMain.style.top='50px';
          narrate(3);
@@ -224,6 +227,7 @@ output2.style.visibility='hidden';}
     if (story===1){ //Tús means Start. We start here.
            //play music.
     
+       portrait.style.display='none';
        audioAbattoir.play();
         //Hide irrelevent buttons
        //inputElements.style.visibility='hidden';    
@@ -312,7 +316,7 @@ function playGame()
 
 function render()
 {
- output.innerHTML=map[mapLocation];
+ output.innerHTML=titleTexts[mapLocation];
 }
 
 let countyId = 0;

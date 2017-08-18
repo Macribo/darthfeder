@@ -18,7 +18,6 @@ module.exports = [
 
 
 `
-<span id='What'>Cén </span><span id='Level of Irish'>Gaelige atá agat?</span> 
   `, 
     
 //2

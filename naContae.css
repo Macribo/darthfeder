@@ -138,8 +138,8 @@ h1
 #output2
 {
     position:relative;
-    top:-68px;
-    left:0px;
+    top:-7px;
+    left:36px;
     font-family: INFO56_0;
     margin: 0px auto;
     margin-top: 16px;
@@ -230,7 +230,7 @@ img
   position:relative;
  display:none;
  top:150px;
-  left:-100px;
+  left:52px;
   height: 60px;
   width: 60px;
   border-radius: 60px;
@@ -240,7 +240,7 @@ img
     position:relative;
   display:none;
   top:150px;
-  left: 150px;
+  left: 326px;
   height: 60px;
   width: 60px;
   border-radius: 60px;
@@ -254,8 +254,8 @@ background-color: #207720;
 color:#ffe959;
 font-size:46;
 text-align:center;
-top:27px;
-left:27px;
+top:-8px;
+left:189px;
 
 
 
@@ -292,7 +292,6 @@ left:27px;
   height:300px;
   left:604px;
   top:116px;
-
 }
 #bearla{
     position:absolute;
@@ -327,12 +326,6 @@ left:27px;
   left: 561px;
   width: 260px;
   height:50px;
-  padding: 2px 2px 2px 5px;
-  border: 1px solid black;
-  background-color: rgba(0,0,0,0.3);
-  -webkit-box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
-	-moz-box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
-	box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
   z-index: 100;
 
 }
@@ -393,8 +386,8 @@ left:27px;
 #imreoirWLv{
     position:relative;
     top:-10px;
-    left:0px;
-    height:156px;
+    left:157px;
+    height:175px;
     width:175px;
     z-index:-1;
     background-image:url("../../images/imreoir5.png");
@@ -404,7 +397,7 @@ left:27px;
     top:-770px;
     left:160px;
     background-image:url("../../images/countyMain.png");
-    z-index:0;
+    z-index:200;
     opacity:.25;
     width:539px;
     height:383px;
