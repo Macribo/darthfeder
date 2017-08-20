@@ -30,7 +30,6 @@ let story = 0;
 
 var map = [];
 
-let imreoirBlurbs=['I won\'t try.','Níl Gaeilge agam','Tá beagán Gaeilge agam','Tá Gaeilge agam','Cainteoir Líofa mé'];
 let blurbId =0;
 
 
@@ -96,12 +95,12 @@ countyBtnLeft.addEventListener("click",bckBadgeHandler, false);
 countyBtnRight.addEventListener("click",fwdBadgeHandler, false);
 
 
+       audioAbattoir.play();
 //Event Handlers
 function fwdBadgeHandler(){
     updateCountyMain(-1);
-    console.log("clicked");
     updateCoNameR();
-    
+   //setTimeout(console.log("wait..."),1500); 
 }
 
 function bckBadgeHandler(){
@@ -115,7 +114,7 @@ updateImreoirLv(1);
    blurbId--;
  if(blurbId<0 ){
         blurbId = 4;}
-output2.innerHTML=imreoirBlurbs[blurbId];
+output2.innerHTML=storyTexts[blurbId];
   
   if(blurbId===0)
     
@@ -131,7 +130,7 @@ updateImreoirLv(-1);
 blurbId++;
 if (blurbId>4){blurbId= 0;}
 console.log("blurrrb"+blurbId);
-output2.innerHTML=imreoirBlurbs[blurbId];
+output2.innerHTML=storyTexts[blurbId];
 if(blurbId===0)
 {
        levelSelect.style.display='none';
@@ -185,7 +184,7 @@ output2.style.visibility='hidden';}
     }
     function levelSelectHandler(){
         mapLocation = 4;
-        story=3;
+        story=4;
         //hide  level-select buttons
          btnLvR.style.display='none';
          btnLvL.style.display='none';
@@ -213,8 +212,6 @@ output2.style.visibility='hidden';}
         joinTeam.style.top='332px';
         joinTeam.style.visibility='visible';
         joinTeam.style.animation='delay-fade-in 5s';
-        contae.style.left='252';
-        contae.style.bottom='-267';
         //countyMain.style.top='-170px';
   tidyBox1.style.backgroundColor="rgba(255,255,255,0.02)";
         story++;
@@ -229,10 +226,8 @@ output2.style.visibility='hidden';}
         story++; 
         playGame();//activates the forest of Lycria &narrate() 
     if (story===1){ //Tús means Start. We start here.
-           //play music.
     
        portrait.style.display='none';
-       audioAbattoir.play();
         //Hide irrelevent buttons
        //inputElements.style.visibility='hidden';    
       inputElements.style.opacity='1';
@@ -252,6 +247,7 @@ output2.style.visibility='hidden';}
        btnLvL.style.display='inline';
 
        
+output2.innerHTML=storyTexts[blurbId];
 
       // story++;
        }

@@ -7,9 +7,8 @@ module.exports = [
 
 
     
-`<span id='welcome'>Failte </span>
-<span id='player1'>imreoir 1 </span>
-
+`
+I won't try.
 
 `,
   
@@ -17,21 +16,24 @@ module.exports = [
     
 
 
-`
+    
+  `<span id='I don\'t have any Irish'>Níl Gaeilge agam</span>
   `, 
     
 //2
-  `Roghnaigh foireann1:
-  `, 
-    
-//19
-  `Roghnaigh foireann2:
-  `, 
-   `Roghnaigh foireann.
-  `, 
-   `Roghnaigh foireann4:
-  `, 
-   `Roghnaigh foireann5:
+  `<span id='I have a little Irish'>Tá beagán Gaeilge agam</span>
+  `,
+//3
+
+   `<span id='I have Irish'>Tá Gaeilge agam</span>
+  `,
+
+ //4   
+   `<span id='I have fluent Irish'>Tá Gaeilge líofa agam</span>
+  `,
+
+
+   `
   `, 
    `Roghnaigh foireann6:
   `, 
