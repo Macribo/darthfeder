@@ -21,6 +21,7 @@ function mapSymbolToTerrainType(mapSymbol) {
         '9':9,//Atlantic waves
         '0':10,//Atlantic waves
         '7':11,//Atlantic waves
+        'D':6,//border
         'F': 6,//border
         'G': 6,//border
         'H': 6,//border

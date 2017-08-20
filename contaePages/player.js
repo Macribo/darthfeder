@@ -115,18 +115,133 @@ module.exports = function Player(){
             locationDetail.style.visibility="visible";   
             title.innerHTML=titleData[9];
         }
-
+//hide detail view if player is not standing on location tile
         if(playerTile==="." || playerTile==="r" || playerTile==="M" ||playerTile==="^" ){locationDetail.style.visibility="hidden";
             title.innerHTML="";}
+
+
+//These are the border crossing tiles
 if(playerTile==="H"||playerTile==="J"||playerTile==="K"||playerTile==="L"||playerTile==="F"||playerTile==="G"){
     whichBorder= playerTile;
     crossBorder(whichBorder);
 }
     }
 };
+var borders;
+var countyBorders= [
+    //empty array to match county-names index
+    [],
 
-function crossBorder(whichBorder){
-    alert(whichBorder);
+// Co. Uíbh Fhailí
+    ['Co. Ros Comáin','Co. Na hIarmhí','Co. Na Mí','Co. Chill Dara','Co. Laoise','Co.Thiobraid Árann','Co. Na Gaillimhe'],
+//Co. Lú
+    ['Co. Ard Mhacha','Co. Mhuineacháin','Co. Na Mí'],
+   //Co. Loch Garman
+    ['Co. Chill Mhantáin','Co. Cheatharlach','Co. Chill Chainnigh'],
+   //Co. Luimnigh
+    ['Co. An Chláir','Co. Thiobraid Árann','Co. Chorcaí','Co. Chiarraí'],
+   //Co. Átha Chliath
+    ['Co. Na Mí','Co. Chill Dara','Co. Chill Mhantáin'],
+   //Co. Liatroma
+    [''],
+   //Co. Aontroma
+    [],
+   //Co. Dhún na nGall
+    [],
+   //Co Fhear Manach
+    [],
+   //Co Chorcaí
+    ['Co. Chiarraí','Co. Luimnigh','Co. Thiobraid Árann','Co. Phort Láirge'],
+   //Co Chill Mhantáin
+    ['Co. Na Mí','Co. Chill Dara','Co. Chill Mhantáin'],
+   //Co. Ros Comáin
+    [],
+   //Co Dhoire
+    [],
+   //Co Shligigh
+    [],
+   //Co Thiobraid Árann
+    ['Co.Uibh Fhailí','Co. Laoise','Co. Chill Chainnigh','Co. Phort Láirge','Co. Chorcaí','Co. Luimnigh'],
+   //Co. Laoise
+    ['Co. Uibh Fhailí','Co. Chill Dara','Co. Cheatharlach','Co. Chill Chainnigh','Co. Thiobraid Árann'],
+   //Co Phort Láirge
+    ['Co. Thiobraid Árann','Co. Chill Chainnigh','Co Chorcaí'],
+   //Co Chill Chainnigh
+    ['Co. Laoise','Co. Cheatharlach','Co. Loch Garman','Co. Phort Láirge','Co. Thiobraid Árann'],
+   //Co Na Mí
+    ['Co. An Cabháin, Co. Mhuineacháin','Co. Lú','Co. Átha Cliath','Co. Chill Dara','Co. Uibh Fhailí','Co. Na hIarmhí'],
+   //Co Chiarraí
+    ['Co. Luimnigh','Co. Chorcaí'],
+   //Co An Longfoirt
+    ['Co.','Co. An Cabháin','Co. Na hIarmhí','Co. Ros Comáin'],
+   //Co Mhaigh Eo
+    [],
+   //Co Na hIarmhí
+    ['Co. An Longfoirt','Co. Na Mí','Co. Uibh Fhailí'],
+   //Co An Dúin
+    ['',''],
+   //Co Ard Mhacha
+    [],
+   //Co Cheatharlach
+    ['Co. Chill Dara','Co. Chill Mhantáin','Co. Loch Garman','Co. Chill Chainnigh','Co. Laoise'],
+   //Co Mhuineacháin
+    ['','','','','',''],
+   //Co na Gaillimhe
+    [],
+   //Co Chill Dara
+    [],
+   //Co. An Chláir
+    ['Co. Na Gaillimhe','Co. Thiobraid Árainn','Co. Luimnigh'],
+   //Co. An Cabháin
+    ['Co. Fhear Manach','Co. Mhuineacháin','Co. Na Mí','Co. An Longfoirt',''],
+   //Co Thír Eoghain
+    []
+
+
+];
+
+function crossBorder(){
+ switch(output){
+ 
+     
+    case 'Co. Uíbh Fhailí': borders= countyBorders[1];
+                            break;
+    case 'Co. Lú': break;
+    case 'Co. Loch Garman': break;
+    case 'Co. Luimnigh': break;
+    case 'Co. Átha Chliath': break;
+    case 'Co. Liatroma': break;
+    case 'Co. Aontroma': break;
+    case 'Co. Dhún na nGall': break;
+    case 'Co. Fhear Manach': break;
+    case 'Co. Chorcaí': break;
+    case 'Co. Chill Mhantáin': break;
+    case 'Co. Ros Comáin': break;
+    case 'Co. Dhoire': break;
+    case 'Co. Shligigh': break;
+    case 'Co. Thiobraid Árann': break;
+    case 'Co. Laoise': break;
+    case 'Co. Phort Láirge': break;
+    case 'Co. Chill Chainnigh': break;
+    case 'Co. Na Mí': break;
+    case 'Co. Chiarraí': break;
+    case 'Co. An Longfoirt': break;
+    case 'Co. Mhaigh Eo': break;
+    case 'Co. Na hIarmhí': break;
+    case 'Co. An Dúin': break;
+    case 'Co. Ard Mhacha': break;
+    case 'Co. Cheatharlach': break;
+    case 'Co. Mhuineacháin': break;
+    case 'Co. na Gaillimhe': break;
+    case 'Co. Chill Dara': break;
+    case 'Co. An Chláir': break;
+    case 'Co. An Cabháin': break;
+    case 'Co. Thír Eoghain': break;
+}
+    
+                            alert(borders);
+    // alert(countyBorders[1]);
+    
 }
 
 var placeNames = [
@@ -593,6 +708,7 @@ var placeNames = [
         "An Goirtín"
     ]
 ];
+
 function getCounty(output){
     if(output==="Co. Uíbh Fhailí"){
         for(var i = 0; i< placeNames[1].length; i++){
