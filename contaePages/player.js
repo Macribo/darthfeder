@@ -143,23 +143,23 @@ var countyBorders= [
    //Co. Átha Chliath
     ['Co. Na Mí','Co. Chill Dara','Co. Chill Mhantáin'],
    //Co. Liatroma
-    [''],
+    ['Co. Dhún na nGall','Co. Fhear Manach','Co. An Cabháin','Co. An Longfoirt','Co. Ros Comáin','Co. Shligigh'],
    //Co. Aontroma
-    [],
+    ['Co. Dhoire','Co. An Dúin'],
    //Co. Dhún na nGall
-    [],
+    ['Co. Dhoire','Co. Thír Eoghain','Co. Fhear Manach','Co. Liatroma'],
    //Co Fhear Manach
-    [],
+    ['Co. Dhún na nGall','Co. Thír Éoghain','Co. Mhuineacháin','Co. An Cabháin','Co. Liatroma'],
    //Co Chorcaí
     ['Co. Chiarraí','Co. Luimnigh','Co. Thiobraid Árann','Co. Phort Láirge'],
    //Co Chill Mhantáin
     ['Co. Na Mí','Co. Chill Dara','Co. Chill Mhantáin'],
    //Co. Ros Comáin
-    [],
+    ['Co. Shligigh','Co. Liatroma','Co. An Longfoirt','Co. Na hIarmhí','Co. Uibh Fhailí','Co. na Gaillimhe'],
    //Co Dhoire
-    [],
+    ['Co. Dhún na nGall','Co. Aontroma','Co. Thír Eoghain'],
    //Co Shligigh
-    [],
+    ['Co. Liatroma','Co. Ros Comáin','Co. Mhaigh Eo'],
    //Co Thiobraid Árann
     ['Co.Uibh Fhailí','Co. Laoise','Co. Chill Chainnigh','Co. Phort Láirge','Co. Chorcaí','Co. Luimnigh'],
    //Co. Laoise
@@ -175,27 +175,27 @@ var countyBorders= [
    //Co An Longfoirt
     ['Co.','Co. An Cabháin','Co. Na hIarmhí','Co. Ros Comáin'],
    //Co Mhaigh Eo
-    [],
+    ['Co. Shligigh','Co. Ros Comáin','Co. na Gaillimhe'],
    //Co Na hIarmhí
     ['Co. An Longfoirt','Co. Na Mí','Co. Uibh Fhailí'],
    //Co An Dúin
-    ['',''],
+    ['Co. Aontroma','Co. Árd Mhacha'],
    //Co Ard Mhacha
-    [],
+    ['Co. Thír Eoghain','Co. An Dúin','Co. Lú','Co. Mhuineacháin'],
    //Co Cheatharlach
     ['Co. Chill Dara','Co. Chill Mhantáin','Co. Loch Garman','Co. Chill Chainnigh','Co. Laoise'],
    //Co Mhuineacháin
     ['','','','','',''],
    //Co na Gaillimhe
-    [],
+    ['Co. Mhaigh Eo','Co. Ros Comáin','Co. Uíbh Fhailí','Co. Thiobraid Árainn','Co. An Chláir'],
    //Co Chill Dara
-    [],
+    ['Co. Na Mí','Co. Átha Cliath','Co. Chill Mhantáin','Co. Cheatharlach','Co. Laoise','Co. Uibh Fhailí'],
    //Co. An Chláir
     ['Co. Na Gaillimhe','Co. Thiobraid Árainn','Co. Luimnigh'],
    //Co. An Cabháin
     ['Co. Fhear Manach','Co. Mhuineacháin','Co. Na Mí','Co. An Longfoirt',''],
    //Co Thír Eoghain
-    []
+    ['Co. Dhún na nGall','Co. Dhoire','Co. Ard Mhacha','Co. Mhuineacháin','Co. Fhear Manach']
 
 
 ];
