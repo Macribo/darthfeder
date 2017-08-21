@@ -121,7 +121,7 @@ module.exports = function Player(){
 
 
 //These are the border crossing tiles
-if(playerTile==="H"||playerTile==="J"||playerTile==="K"||playerTile==="L"||playerTile==="F"||playerTile==="G"){
+if(playerTile ==="D"||playerTile==="H"||playerTile==="J"||playerTile==="K"||playerTile==="L"||playerTile==="F"||playerTile==="G"){
     whichBorder= playerTile;
     crossBorder(whichBorder);
 }
@@ -200,46 +200,127 @@ var countyBorders= [
 
 ];
 
-function crossBorder(){
+function crossBorder(whichBorder){
  switch(output){
  
      
     case 'Co. Uíbh Fhailí': borders= countyBorders[1];
                             break;
-    case 'Co. Lú': break;
-    case 'Co. Loch Garman': break;
-    case 'Co. Luimnigh': break;
-    case 'Co. Átha Chliath': break;
-    case 'Co. Liatroma': break;
-    case 'Co. Aontroma': break;
-    case 'Co. Dhún na nGall': break;
-    case 'Co. Fhear Manach': break;
-    case 'Co. Chorcaí': break;
-    case 'Co. Chill Mhantáin': break;
-    case 'Co. Ros Comáin': break;
-    case 'Co. Dhoire': break;
-    case 'Co. Shligigh': break;
-    case 'Co. Thiobraid Árann': break;
-    case 'Co. Laoise': break;
-    case 'Co. Phort Láirge': break;
-    case 'Co. Chill Chainnigh': break;
-    case 'Co. Na Mí': break;
-    case 'Co. Chiarraí': break;
-    case 'Co. An Longfoirt': break;
-    case 'Co. Mhaigh Eo': break;
-    case 'Co. Na hIarmhí': break;
-    case 'Co. An Dúin': break;
-    case 'Co. Ard Mhacha': break;
-    case 'Co. Cheatharlach': break;
-    case 'Co. Mhuineacháin': break;
-    case 'Co. na Gaillimhe': break;
-    case 'Co. Chill Dara': break;
-    case 'Co. An Chláir': break;
-    case 'Co. An Cabháin': break;
-    case 'Co. Thír Eoghain': break;
+    case 'Co. Lú':  borders= countyBorders[2];
+         break;
+    case 'Co. Loch Garman':  borders= countyBorders[3];
+         break;
+    case 'Co. Luimnigh':  borders= countyBorders[4];
+         break;
+    case 'Co. Átha Chliath':  borders= countyBorders[5];
+         break;
+    case 'Co. Liatroma':  borders= countyBorders[6];
+         break;
+    case 'Co. Aontroma':  borders= countyBorders[7];
+         break;
+    case 'Co. Dhún na nGall':  borders= countyBorders[8];
+         break;
+    case 'Co. Fhear Manach':  borders= countyBorders[9];
+         break;
+    case 'Co. Chorcaí':  borders= countyBorders[10];
+         break;
+    case 'Co. Chill Mhantáin':  borders= countyBorders[11];
+         break;
+    case 'Co. Ros Comáin':  borders= countyBorders[12];
+         break;
+    case 'Co. Dhoire':  borders= countyBorders[13];
+         break;
+    case 'Co. Shligigh':  borders= countyBorders[14];
+         break;
+    case 'Co. Thiobraid Árann':  borders= countyBorders[15];
+         break;
+    case 'Co. Laoise':  borders= countyBorders[16];
+         break;
+    case 'Co. Phort Láirge':  borders= countyBorders[17];
+         break;
+    case 'Co. Chill Chainnigh':  borders= countyBorders[18];
+         break;
+    case 'Co. Na Mí':  borders= countyBorders[19];
+         break;
+    case 'Co. Chiarraí':  borders= countyBorders[20];
+         break;
+    case 'Co. An Longfoirt':  borders= countyBorders[21];
+         break;
+    case 'Co. Mhaigh Eo':  borders= countyBorders[22];
+         break;
+    case 'Co. Na hIarmhí':  borders= countyBorders[23];
+         break;
+    case 'Co. An Dúin':  borders= countyBorders[24];
+         break;
+    case 'Co. Ard Mhacha':  borders= countyBorders[25];
+         break;
+    case 'Co. Cheatharlach':  borders= countyBorders[26];
+         break;
+    case 'Co. Mhuineacháin':  borders= countyBorders[27];
+         break;
+    case 'Co. na Gaillimhe':  borders= countyBorders[28];
+         break;
+    case 'Co. Chill Dara':  borders= countyBorders[29];
+         break;
+    case 'Co. An Chláir':  borders= countyBorders[30];
+         break;
+    case 'Co. An Cabháin':  borders= countyBorders[31];
+         break;
+    case 'Co. Thír Eoghain':  borders= countyBorders[32];
+         break;
 }
     
-                            alert(borders);
+
+    if(playerTile==="D"){
+    
+                            alert("An míann leat " + output + " a fágál, agus taisteal go " +borders[0] + " ?");
+}
+
+
+
+    if(playerTile==="F"){
+    
+                            alert("An míann leat " + output + " a fágál, agus taisteal go " +borders[1] + " ?");
+}
+
+
+
+    if(playerTile==="G"){
+    
+                            alert("An míann leat " + output + " a fágál, agus taisteal go " +borders[2] + " ?");
+}
+
+
+
+    if(playerTile==="H"){
+    
+                            alert("An míann leat " + output + " a fágál, agus taisteal go " +borders[3] + " ?");
+}
+
+
+
+    if(playerTile==="J"){
+    
+                            alert("An míann leat " + output + " a fágál, agus taisteal go " +borders[4] + " ?");
+}
+
+
+
+    if(playerTile==="K"){
+    
+                            alert("An míann leat " + output + " a fágál, agus taisteal go " +borders[5] + " ?");
+}
+
+
+
+    if(playerTile==="L"){
+    
+                            alert("An míann leat " + output + " a fágál, agus taisteal go " +borders[6] + " ?");
+}
+
+
+
+   
     // alert(countyBorders[1]);
     
 }
