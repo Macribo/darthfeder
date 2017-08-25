@@ -173,11 +173,11 @@ var countyBorders= [
    //Co Chiarraí
     ['Co. Luimnigh','Co. Chorcaí'],
    //Co An Longfoirt
-    ['Co.','Co. An Cabháin','Co. Na hIarmhí','Co. Ros Comáin'],
+    ['Co. Liatroma','Co. An Cabháin','Co. Na hIarmhí','Co. Ros Comáin'],
    //Co Mhaigh Eo
     ['Co. Shligigh','Co. Ros Comáin','Co. na Gaillimhe'],
    //Co Na hIarmhí
-    ['Co. An Longfoirt','Co. Na Mí','Co. Uibh Fhailí'],
+    ['Co. An Longfoirt','Co. Na Mí','Co. Uibh Fhailí','Co. Ros Comáin'],
    //Co An Dúin
     ['Co. Aontroma','Co. Árd Mhacha'],
    //Co Ard Mhacha

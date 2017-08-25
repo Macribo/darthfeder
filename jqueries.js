@@ -1,8 +1,13 @@
  //jshint esversion:6 
 $(document).ready(function(){
-var clickCounter=0;
-var levelCounter=0;  //TODO replace with $('output2 span') as in manifesto/jqueries.js
 
+var countyCounter=0;    
+var clickCounter=0;
+var levelCounter=0;  //TODO replace these counters with $('output2 span') as in manifesto/jqueries.js
+var countyEng=['x','y','z'];
+ 
+
+      
 
 
 
@@ -99,9 +104,23 @@ if(levelCounter===4){ $('#bearla').text('I have fluent Irish');
 });
 
 $('#levelSelect').click(function(){
+    
     console.log("hello from jqueries");
     clickCounter++;
     });
+
+  $('#contae span').hover(function(){
+             $('#bearla').text($(this).attr('id'));
+             $(this).css('color','#e35ee5');
+    });
+
+        $('#contae').mouseout(function(){
+            $('#bearla').text('');
+            $(this).css('color','#fff');
+
+    });
+    
+    
 
 });
 

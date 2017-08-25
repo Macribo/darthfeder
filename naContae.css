@@ -75,7 +75,7 @@ left:0px;
 #left-panel
 {
   margin:20px;
-  width: 350px;
+  width: 202px;
   height: 423px;
   position: relative;
   background-image: url("../../images/bg2.png");
@@ -265,7 +265,7 @@ color:#ffe959;
 font-size:46;
 text-align:center;
 top:93px;
-left:-232px;
+left:-307px;
 
 
 
@@ -274,11 +274,11 @@ left:-232px;
   position:relative;
   display:none;
   top:150px;
-  left:-138px;
+  left:-109px;
   height: 60px;
   width: 60px;
   border-radius: 60px;
- background-color: green;
+ background-color: #034408;
  z-index:75;
 }
 #countyBtnRight {
@@ -302,6 +302,8 @@ left:-232px;
   height:300px;
   left:604px;
   top:116px;
+ transition: 1s background-image ease-out;
+ 
 }
 #bearla{
     position:absolute;
@@ -386,7 +388,7 @@ left:-232px;
     height:420px;
     background-image:url("../../images/dealbh.png");
     bottom: 6px;
-    left:4px;
+    left:-71px;
     z-index:10;
 }
 

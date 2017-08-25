@@ -96,6 +96,11 @@ countyBtnRight.addEventListener("click",fwdBadgeHandler, false);
 
 
        audioAbattoir.play();
+    tidyBox1.style.backgroundImage="url('../../images/bgAnim2.gif')";
+    setTimeout(function(){
+        tidyBox1.style.backgroundImage="url('../../images/bgDark.png')";
+    //    tidyBox1.style.backgroundColor="rgba(255,255,255,0.02)";
+    },2000);
 //Event Handlers
 function fwdBadgeHandler(){
     updateCountyMain(-1);
@@ -183,6 +188,7 @@ output2.style.visibility='hidden';}
     
     }
     function levelSelectHandler(){
+        setTimeout(function(){tidyBox1.style.backgroundImage="";},1000);
         mapLocation = 4;
         story=4;
         //hide  level-select buttons
@@ -208,7 +214,7 @@ output2.style.visibility='hidden';}
          countyBtnLeft.style.animation='fade-in 1s forwards';
          countyBtnLeft.style.display='inline';
           joinTeam.style.display='inline';
-        joinTeam.style.left='-444px';
+        joinTeam.style.left='-520px';
         joinTeam.style.top='332px';
         joinTeam.style.visibility='visible';
         joinTeam.style.animation='delay-fade-in 5s';
